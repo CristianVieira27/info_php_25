@@ -12,3 +12,18 @@
 * Usar a extensão Live Server para visualizar o site em tempo real.
 * O código HTML deve ser salvo com a extensão .html.
 * O código HTML deve ser salvo na pasta do projeto.
+
+
+Exemplo de formulário e processamento
+
+<form method="post">
+    Nome: <input type="text" name="nome">
+    <input type="submit" value="Enviar">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome"];
+    echo "Olá, $nome!";
+}
+?>
