@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Olá Mundo! em PHP</title>
-</head>
-<body>
-    <?php
-    echo "<h1>Olá Mundo!</h1>";
-    echo "<p>Este é o meu primeiro programa em PHP.</p>";
-    ?>
-</body>
-</html>
+<<?php 
 
-*Utilizar extensão PHP Awesome Snippets
+$numeroMultiplicador= 7;
+
+echo 1 = $numeroMultiplicador . "<br/>";
+echo 2 = $numeroMultiplicador . "<br/>";
+echo 3 = $numeroMultiplicador . "<br/>";
+echo 4 = $numeroMultiplicador . "<br/>";
+echo 5 = $numeroMultiplicador . "<br/>"; 
+echo 6 = $numeroMultiplicador . "<br/>";
+echo 7 = $numeroMultiplicador . "<br/>";
+echo 8 = $numeroMultiplicador . "<br/>";
+echo 9 = $numeroMultiplicador . "<br/>";
+echo 10 = $numeroMultiplicador . "<br/>";
+echo "<br><br>";
 
 
-Conceitos básicos de PHP (resumido)
-Conceito	Exemplo
-Variável	$nome = "Maria";
-Condicional	if ($idade > 18) { ... }
-Loop	for ($i = 0; $i < 5; $i++)
-Função	function saudacao() { ... }
-Array	$lista = ["a", "b", "c"];
+$resultado = 1 * $numeroMultiplicador;
+echo " 1 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 2 * $numeroMultiplicador;
+echo " 2 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 3 * $numeroMultiplicador;
+echo " 3 x $numeroMultiplicador = $resultado <br/>";           
+$resultado = 4 * $numeroMultiplicador;
+echo " 4 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 5 * $numeroMultiplicador;
+echo " 5 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 6 * $numeroMultiplicador;
+echo " 6 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 7 * $numeroMultiplicador;
+echo " 7 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 8 * $numeroMultiplicador;
+echo " 8 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 9 * $numeroMultiplicador;
+echo " 9 x $numeroMultiplicador = $resultado <br/>";
+$resultado = 10 * $numeroMultiplicador;
+echo " 10 x $numeroMultiplicador = $resultado <br/>";
+echo "<br/>";
