@@ -11,6 +11,8 @@ file open folder: seleciona tudo e apaga
 
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,13 +26,30 @@ file open folder: seleciona tudo e apaga
 </body>
 </html>
 
-*Utilizar extensão PHP Awesome Snippets
 
 
-Conceitos básicos de PHP (resumido)
-Conceito	Exemplo
-Variável	$nome = "Maria";
-Condicional	if ($idade > 18) { ... }
-Loop	for ($i = 0; $i < 5; $i++)
-Função	function saudacao() { ... }
-Array	$lista = ["a", "b", "c"];
+Operações matemáticas
+
+PHYTON
+a = 10
+b = 5
+
+soma = a + b       # Adição
+subtracao = a - b  # Subtração
+multiplicacao = a * b  # Multiplicação
+divisao = a / b    # Divisão
+potencia = a ** 2  # Potenciação
+modulo = a % b     # Módulo (resto da divisão)
+
+
+
+javascript
+let a = 10;
+let b = 5;
+
+let soma = a + b;
+let subtracao = a - b;
+let multiplicacao = a * b;
+let divisao = a / b;
+let potencia = a ** 2;
+let modulo = a % b;
