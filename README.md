@@ -59,7 +59,7 @@ let modulo = a % b;
 
 
 
-<h2>Exemplos com Operadores de comparação</h2>
+Exemplos com Operadores de comparação
     <?php
     $a = 10;
     $b = 20;
@@ -87,7 +87,7 @@ let modulo = a % b;
     ?>
     <br><br><br><br>
 
-    <h2>Exemplos com Operadores lógicos</h2>
+Exemplos com Operadores lógicos
     <?php
     $a = 10;
     $b = 20;
@@ -114,7 +114,7 @@ let modulo = a % b;
 
     <br><br><br><br>
 
-    <h2>Exemplos com Operadores de atribuição</h2>  
+Exemplos com Operadores de atribuição
     <?php
     $a = 10;
     $b = 20;
@@ -144,5 +144,5 @@ let modulo = a % b;
     $a >>= $b; // $a = $a >> $b
     echo "A é igual a $a <br>";
 
-    ?>
+    
     <br><br><br><br>
