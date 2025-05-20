@@ -14,7 +14,7 @@
     $nome = "Cristian";
     $idade = 27; 
     
-    echo "<p>Olá! Meu nome é $nome e eu tenho $idade anos!</p>";
+    echo "<p>Olá! Meu nome é $nome, tenho $idade anos!</p>";
     ?>
     <br><br><br><br>
 
