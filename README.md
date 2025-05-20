@@ -53,3 +53,96 @@ let multiplicacao = a * b;
 let divisao = a / b;
 let potencia = a ** 2;
 let modulo = a % b;
+
+
+
+
+
+
+<h2>Exemplos com Operadores de comparação</h2>
+    <?php
+    $a = 10;
+    $b = 20;
+
+    if ($a == $b) {
+        echo "A é igual a B";
+    } else {
+        echo "A não é igual a B";
+    }
+    echo "<br>";
+    if ($a != $b) {
+        echo "A é diferente de B";
+    } else {
+        echo "A é igual a B";
+    }
+    echo "<br>";
+    if ($a > $b) {
+        echo "A é maior que B";
+    } else {
+        echo "A não é maior que B";
+    }
+    echo "<br>";
+
+
+    ?>
+    <br><br><br><br>
+
+    <h2>Exemplos com Operadores lógicos</h2>
+    <?php
+    $a = 10;
+    $b = 20;
+
+    if ($a == 10 && $b == 20) {
+        echo "A é igual a 10 e B é igual a 20";
+    } else {
+        echo "A não é igual a 10 ou B não é igual a 20";
+    }
+    echo "<br>";
+    if ($a == 10 || $b == 30) {
+        echo "A é igual a 10 ou B é igual a 30";
+    } else {
+        echo "A não é igual a 10 e B não é igual a 30";
+    }
+    echo "<br>";
+    if ($a == 10 xor $b == 30) {
+        echo "A é igual a 10 ou B é igual a 30, mas não os dois";
+    } else {
+        echo "A não é igual a 10 e B não é igual a 30";
+    }
+    echo "<br>";
+    ?>
+
+    <br><br><br><br>
+
+    <h2>Exemplos com Operadores de atribuição</h2>  
+    <?php
+    $a = 10;
+    $b = 20;
+
+    $a += $b; // $a = $a + $b
+    echo "A é igual a $a <br>";
+    $a -= $b; // $a = $a - $b
+    echo "A é igual a $a <br>";
+    $a *= $b; // $a = $a * $b
+    echo "A é igual a $a <br>";
+    $a /= $b; // $a = $a / $b
+    echo "A é igual a $a <br>";
+    $a %= $b; // $a = $a % $b
+    echo "A é igual a $a <br>";
+    $a **= $b; // $a = $a ** $b
+    echo "A é igual a $a <br>";
+    $a .= $b; // $a = $a . $b
+    echo "A é igual a $a <br>";
+    $a &= $b; // $a = $a & $b
+    echo "A é igual a $a <br>";
+    $a |= $b; // $a = $a | $b
+    echo "A é igual a $a <br>";
+    $a ^= $b; // $a = $a ^ $b
+    echo "A é igual a $a <br>";
+    $a <<= $b; // $a = $a << $b
+    echo "A é igual a $a <br>";
+    $a >>= $b; // $a = $a >> $b
+    echo "A é igual a $a <br>";
+
+    ?>
+    <br><br><br><br>
