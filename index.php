@@ -36,7 +36,7 @@
     echo "<br>";
 
     ?>
-    <p>Segunda forma de fazer a tabuada</p>
+    <p>-Segunda forma de fazer a tabuada</p>
     <?php
     for ($i = 1; $i <= 10; $i++) {
         echo "$i * $valorMultiplicacao = " . ($i * $valorMultiplicacao) . "<br>";
