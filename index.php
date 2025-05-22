@@ -17,7 +17,6 @@ $prova2 = 8;
 $prova3 = 6;
 $prova4 = 7;
 $soma = ($prova1 + $prova2 + $prova3 + $prova4);
-$media = 7 / 4;
 $media = $soma / 4;
 
 echo "A média do aluno é: $media <br>";
