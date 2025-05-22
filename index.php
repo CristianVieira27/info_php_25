@@ -25,4 +25,42 @@ if($media >= 7){
 } else {
     echo "Reprovado com média: $media";
 }
+
+echo "<br><br><br><br><br>";
+
+$soma = ($prova1 + $prova2 + $prova3 + $prova4);
+$media = $soma / 4;
+
+// Média ponderada 
+
+$peso1 = 1;
+$peso2 = 2;
+$peso3 = 3;
+$peso4 = 4;
+$media_ponderada = (
+    $prova1 * $peso1 +
+    $prova2 * $peso2 +
+    $prova3 * $peso3 +
+    $prova4 * $peso4
+) / ($peso1 + $peso2 + $peso3 + $peso4);
+
+// Média harmônica
+
+$media_harmonica = 4 / (
+    (1/$prova1) +
+    (1/$prova2) +
+    (1/$prova3) +
+    (1/$prova4)
+);
+
+echo "A média do aluno é: $media <br>";
+echo "A média ponderada do aluno é: $media_ponderada <br>";
+echo "A média harmônica do aluno é: $media_harmonica <br>";
+
+if($media >= 7){
+    echo "Aprovado com média: $media";
+} else {
+    echo "Reprovado com média: $media";
+}
+
 ?>
