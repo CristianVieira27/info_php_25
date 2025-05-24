@@ -199,3 +199,41 @@ Exemplos com Operadores de atribuição
 </body>
 </html>
 
+Para calcular a média ponderada, multiplica cada valor do conjunto por seu peso, soma esses produtos e divide pelo total dos pesos. Em outras palavras, a média ponderada dá mais importância a valores que têm maior peso. 
+Passos:
+Identificar os valores e seus pesos: Determine os valores que serão utilizados no cálculo e os pesos correspondentes a cada valor.
+Multiplicar cada valor pelo seu peso: Multiplique cada valor pelo seu peso correspondente.
+Soma dos produtos: Some todos os resultados das multiplicações.
+Soma dos pesos: Some todos os pesos.
+Dividir a soma dos produtos pela soma dos pesos: Divida o resultado do passo 3 pelo resultado do passo 4.
+O resultado é a média ponderada: O resultado final é a média ponderada do conjunto de valores. 
+Exemplo:
+Suponha que você tenha as seguintes notas em um curso, com os seus respectivos pesos:
+Prova 1: 8,0 (peso 2)
+Prova 2: 9,0 (peso 3)
+Trabalho: 7,0 (peso 1)
+Multiplicação:
+8,0 * 2 = 16,0
+9,0 * 3 = 27,0
+7,0 * 1 = 7,0
+Soma dos produtos:
+16,0 + 27,0 + 7,0 = 50,0
+Soma dos pesos:
+2 + 3 + 1 = 6
+Divisão:
+50,0 / 6 = 8,33
+Média Ponderada: A média ponderada do curso é 8,33. 
+
+
+
+Para calcular a média harmônica de um conjunto de valores, divide-se o número total de elementos pela soma dos inversos de cada elemento do conjunto. Em termos matemáticos, se tivermos n valores (x1, x2, ..., xn), a média harmônica (MH) é calculada como: 
+MH = n / (1/x1 + 1/x2 + ... + 1/xn). 
+Passo a passo:
+Encontrar os inversos de cada elemento: Para cada valor do conjunto, calcule o seu inverso (1/x).
+Soma dos inversos: Adicione todos os inversos calculados no passo anterior.
+Dividir o número de elementos pela soma: Divida o número total de elementos do conjunto pela soma dos inversos obtida no passo 2. O resultado é a média harmônica.
+Exemplo:
+Considere o conjunto {2, 3, 4}. 
+Inversos: 1/2, 1/3, 1/4
+Soma dos inversos: 1/2 + 1/3 + 1/4 = 13/12
+Média harmônica: 3 / (13/12) = 36/13 ≈ 2.77.
