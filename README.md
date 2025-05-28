@@ -10,7 +10,7 @@ file open folder: seleciona tudo e apaga
   verifica se esta em: /var/www/html/info_php_25
 
 
-
+echo "<br><br><br>";
 
 
 <!DOCTYPE html>
@@ -25,6 +25,8 @@ file open folder: seleciona tudo e apaga
     ?>
 </body>
 </html>
+
+echo "<br><br><br>";
 
 
 
@@ -41,7 +43,7 @@ divisao = a / b    # Divisão
 potencia = a ** 2  # Potenciação
 modulo = a % b     # Módulo (resto da divisão)
 
-
+echo "<br><br><br>";
 
 javascript
 let a = 10;
@@ -55,7 +57,7 @@ let potencia = a ** 2;
 let modulo = a % b;
 
 
-
+echo "<br><br><br>";
 
 
 
@@ -87,6 +89,10 @@ Exemplos com Operadores de comparação
     ?>
     <br><br><br><br>
 
+
+echo "<br><br><br>";
+
+
 Exemplos com Operadores lógicos
     <?php
     $a = 10;
@@ -112,7 +118,8 @@ Exemplos com Operadores lógicos
     echo "<br>";
     ?>
 
-    <br><br><br><br>
+    echo "<br><br><br>";
+
 
 Exemplos com Operadores de atribuição
     <?php
@@ -145,11 +152,8 @@ Exemplos com Operadores de atribuição
     echo "A é igual a $a <br>";
 
     
-    <br><br><br><br>
+   echo "<br><br><br>";
 
-
-
-    https://www.w3schools.com/
 
 
 
@@ -192,10 +196,8 @@ Exemplos com Operadores de atribuição
 
     ?>
 
-    <br><br><br><br>
+    echo "<br><br><br>";
 
-
-    <?php ?>
 </body>
 </html>
 
@@ -224,6 +226,8 @@ Divisão:
 50,0 / 6 = 8,33
 Média Ponderada: A média ponderada do curso é 8,33. 
 
+echo "<br><br><br>";
+
 
 
 Para calcular a média harmônica de um conjunto de valores, divide-se o número total de elementos pela soma dos inversos de cada elemento do conjunto. Em termos matemáticos, se tivermos n valores (x1, x2, ..., xn), a média harmônica (MH) é calculada como: 
@@ -239,6 +243,8 @@ Soma dos inversos: 1/2 + 1/3 + 1/4 = 13/12
 Média harmônica: 3 / (13/12) = 36/13 ≈ 2.77.
 
 
+echo "<br><br><br>";
+
 // Ler 3 valores(A, B e C) e informar se eles sao iguais.
 $valorA = 10;
 $valorB = 10;
@@ -251,7 +257,9 @@ if ($valorA == $valorB && $valorA == $valorC) {
 }
 
 
-echo "<br><br>";
+echo "<br><br><br>";
+
+
 /* Ler 3 valores(A, B e C) e informar ao usuario qual tipo de triangulo ele forma.
     OU se não formam nenhum triangulo. 
     Triangulos a considerar: equilatero, isoceles e escaleno 
@@ -282,7 +290,7 @@ else {
 }
 
 
-echo "<br><br>";
+echo "<br><br><br>";
 
 
 $multiplicador = 5;
@@ -292,3 +300,82 @@ for ($i = 0; $i <= 10; $i++) {
 
     echo "$multiplicador * $i = $resultado" . "<br>";
 }
+
+
+echo "<br><br><br>";
+
+
+
+ 1. Loop for
+Usado quando sabemos quantas vezes queremos repetir.
+
+ Sintaxe:
+php
+
+for (início; condição; incremento) {
+    // Código a repetir
+
+<?php
+for ($i = 1; $i <= 5; $i++) {
+    echo "Valor de i: $i <br>";
+}
+
+ Explicação:
+$i = 1: começa em 1
+
+$i <= 5: repete até $i chegar a 5
+
+$i++: aumenta $i de 1 em 1
+?>
+
+
+echo "<br><br><br>";
+
+ 2. Loop while
+Usado quando não sabemos exatamente o número de repetições, mas temos uma condição.
+
+ Sintaxe:
+php
+Copiar código
+while (condição) {
+    // Código a repetir
+}
+✅ Exemplo:
+php
+Copiar código
+<?php
+$i = 1;
+while ($i <= 5) {
+    echo "Valor de i: $i <br>";
+    $i++;
+}
+?>
+🧠 Explicação:
+Verifica a condição antes de executar o código.
+
+echo "<br><br><br>";
+
+
+3. Loop do while
+Semelhante ao while, mas garante que o código será executado pelo menos uma vez.
+
+📌 Sintaxe:
+php
+Copiar código
+do {
+    // Código a repetir
+} while (condição);
+✅ Exemplo:
+php
+Copiar código
+<?php
+$i = 1;
+do {
+    echo "Valor de i: $i <br>";
+    $i++;
+} while ($i <= 5);
+?>
+🧠 Diferença:
+Executa o bloco primeiro, depois verifica a condição.
+
+echo "<br><br><br>";
