@@ -237,3 +237,58 @@ Considere o conjunto {2, 3, 4}.
 Inversos: 1/2, 1/3, 1/4
 Soma dos inversos: 1/2 + 1/3 + 1/4 = 13/12
 Média harmônica: 3 / (13/12) = 36/13 ≈ 2.77.
+
+
+// Ler 3 valores(A, B e C) e informar se eles sao iguais.
+$valorA = 10;
+$valorB = 10;
+$valorC = 10;
+
+if ($valorA == $valorB && $valorA == $valorC) {
+    echo "Os 3 valores sao iguais.";
+} else {
+    echo "Os valores sao diferentes";
+}
+
+
+echo "<br><br>";
+/* Ler 3 valores(A, B e C) e informar ao usuario qual tipo de triangulo ele forma.
+    OU se não formam nenhum triangulo. 
+    Triangulos a considerar: equilatero, isoceles e escaleno 
+*/
+$valorA = 7;
+$valorB = 8;
+$valorC = 8;
+
+
+if ($valorA == $valorB && $valorA == $valorC) {
+    echo "Os valores informados formam um triangulo equilatero.";
+} 
+else if (
+    ($valorA == $valorB && $valorA > $valorC) ||
+    ($valorB == $valorC && $valorB > $valorA) ||
+    ($valorA == $valorC && $valorA > $valorB)
+    ) {
+    echo "Os valores informados formam um triangulo isoceles.";
+}
+else if (
+    ($valorA != $valorB && $valorB != $valorC) &&
+    ($valorA + $valorB > $valorC)
+    ) {
+         echo "Os valores informados formam um triangulo escaleno.";
+    }
+else {
+    echo "Os valores informados NÃO formam um triangulo";
+}
+
+
+echo "<br><br>";
+
+
+$multiplicador = 5;
+
+for ($i = 0; $i <= 10; $i++) {
+    $resultado = $multiplicador * $i;
+
+    echo "$multiplicador * $i = $resultado" . "<br>";
+}
