@@ -422,3 +422,93 @@ let arrayComplexo = [
 console.log(arrayComplexo[1].nome); // Imprime "Pedro"
 console.log(arrayComplexo[2][0]); // Imprime 5
 Em resumo: Os arrays são estruturas de dados versáteis que podem ser usadas para organizar e armazenar dados de diferentes tipos e complexidades. 
+
+//funções para array
+
+
+array — Cria um array
+array_all — Verifica se todos os elementos de um array satisfazem uma função de retorno
+array_any — Verifica se pelo menos um elemento de um array satisfaz uma função de retorno
+array_change_key_case — Modifica a caixa de todas as chaves em um array
+array_chunk — Divide um array em pedaços
+array_column — Retorna os valores de uma coluna do array informado
+array_combine — Cria um array usando um array para chaves e outro para valores
+array_count_values — Conta as ocorrências de cada valor distinto em um array
+array_diff — Computa as diferenças entre arrays
+array_diff_assoc — Computa a diferença entre arrays com checagem adicional de índice
+array_diff_key — Computa a diferença entre arrays usando as chaves na comparação
+array_diff_uassoc — Computa a diferença entre arrays com checagem adicional de índice que feita por uma função de callback fornecida pelo usuário
+array_diff_ukey — Computa a diferença entre arrays usando uma função callback na comparação de chaves
+array_fill — Preenche um array com valores
+array_fill_keys — Preenche um array com valores, especificando chaves
+array_filter — Filtra elementos de um array utilizando uma função callback
+array_find — Retorna um primeiro elemento que satisfaz uma função de retorno
+array_find_key — Retorna a chave do primeiro elemento que satisfaz uma função de retorno
+array_flip — Permuta todas as chaves e seus valores associados em um array
+array_intersect — Calcula a interseção entre arrays
+array_intersect_assoc — Computa a interseção de arrays com uma adicional verificação de índice
+array_intersect_key — Calcula a interseção de arrays, comparando pelas chaves
+array_intersect_uassoc — Computa a interseção de arrays com checagem de índice adicional, compara índices por uma função de callback
+array_intersect_ukey — Computa a interseção de arrays usando uma função de retorno nas chaves para comparação
+array_is_list — Verifica se um array é uma lista
+array_key_exists — Verifica se uma chave ou índice existe em um array
+array_key_first — Obtém a primeira chave de um array
+array_key_last — Obtém a última chave de um array
+array_keys — Retorna todas as chaves ou uma parte das chaves de um array
+array_map — Aplica uma função em todos os elementos dos arrays dados
+array_merge — Combina um ou mais arrays
+array_merge_recursive — Mescla um ou mais arrays recursivamente
+array_multisort — Ordena múltiplos arrays ou arrays multidimensionais
+array_pad — Expande um array para um certo comprimento utilizando um determinado valor
+array_pop — Extrai um elemento do final do array
+array_product — Calcula o produto dos valores de um array
+array_push — Adiciona um ou mais elementos no final de um array
+array_rand — Escolhe uma ou mais chaves aleatórias de um array
+array_reduce — Reduz um array para um único valor através de um processo iterativo via callback
+array_replace — Substitui elementos de arrays passados no primeiro array
+array_replace_recursive — Substitui elementos de arrays passado no primeiro array recursivamente
+array_reverse — Retorna um array com os elementos na ordem inversa
+array_search — Procura por um valor em um array e retorna sua chave correspondente caso seja encontrado
+array_shift — Retira o primeiro elemento de um array
+array_slice — Extrai uma parcela de um array
+array_splice — Remove uma parte array e a substitui por outra coisa
+array_sum — Calcula a soma dos elementos de um array
+array_udiff — Computa a diferença de arrays usando uma função de callback para comparação dos dados
+array_udiff_assoc — Computa a diferença entre arrays com verificação adicional de índice, comparando dados por uma função de retorno
+array_udiff_uassoc — Computa a diferença entre arrays com checagem adicional de índice, compara dados e índices por uma função de callback
+array_uintersect — Computa a interseção de array, comparando dados com uma função callback
+array_uintersect_assoc — Computa a interseção de arrays com checagem adicional de índice, compara os dados utilizando uma função de callback
+array_uintersect_uassoc — Computa a interseção de arrays com checagem adicional de índice, compara os dados e os índices utilizando funções de callback separadas
+array_unique — Remove os valores duplicados de um array
+array_unshift — Adiciona um ou mais elementos no início de um array
+array_values — Retorna todos os valores de um array
+array_walk — Aplica uma determinada função em cada elemento de um array
+array_walk_recursive — Aplica um função do usuário recursivamente para cada membro de um array
+arsort — Ordena um array em ordem descrescente e mantém a associação de índices
+asort — Ordena um array em ordem crescente e mantém a associação de índices
+compact — Cria um array contendo variáveis e seus valores
+count — Conta todos os elementos de um array ou de um objeto Countable
+current — Retorna o elemento atual em um array
+each — Retorna o par atual de chave e valor de um array e avança o seu cursor
+end — Define o ponteiro interno de um array para seu último elemento
+extract — Importa variáveis para a tabela de símbolos a partir de um array
+in_array — Verifica se um valor existe em um array
+key — Retorna uma chave de um array
+key_exists — Sinônimo de array_key_exists
+krsort — Ordena um array pelas chaves em ordem descrescente
+ksort — Ordena um array pelas chaves em ordem crescente
+list — Cria variáveis como se fossem arrays
+natcasesort — Ordena um array utilizando o algoritmo da "ordem natural" sem diferenciar maiúsculas e minúsculas
+natsort — Ordena um array utilizando o algoritmo de "ordem natural"
+next — Avança o ponteiro interno de um array
+pos — Sinônimo de current
+prev — Retrocede o ponteiro interno de um array
+range — Cria um array contendo uma faixa de elementos
+reset — Faz o ponteiro interno de um array apontar para o seu primeiro elemento
+rsort — Ordena um array em ordem descrescente
+shuffle — Embaralha um array
+sizeof — Sinônimo de count
+sort — Ordena um array em ordem ascendente
+uasort — Ordena um array com uma função de comparação definida pelo usuário e mantém associações de índices
+uksort — Ordena um array pelas chaves utilizando uma função de comparação definida pelo usuário.
+usort — Ordena um array pelos valores utilizando uma função de comparação definida pelo usuário
