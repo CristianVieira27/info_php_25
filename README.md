@@ -379,3 +379,46 @@ do {
 Executa o bloco primeiro, depois verifica a condição.
 
 echo "<br><br><br>";
+
+
+Em arrays, você pode ter: apenas valores, pares chave-valor, arrays multidimensionais e uma combinação de todos esses elementos. Os arrays podem ser unidimensionais ou multidimensionais, e podem armazenar diferentes tipos de dados. 
+Aprofundamento:
+Apenas Valores (Array Indexado):
+Um array que armazena uma lista de valores, acessíveis por índices numéricos (0, 1, 2, etc.). Por exemplo: [1, 2, "ola", 3.14]. 
+Chaves e Valores (Array Associativo):
+Um array que armazena pares de chaves e valores, onde as chaves podem ser de qualquer tipo (string, número, etc.). Por exemplo: {nome: "João", idade: 30}. 
+Arrays Multidimensionais:
+Arrays que contêm outros arrays. Isso permite criar estruturas de dados mais complexas, como matrizes ou tabelas. Por exemplo: [[1, 2], [3, 4]]. 
+Mix de Tudo:
+Um array pode conter uma mistura de tipos de dados, incluindo outros arrays e arrays associativos. Por exemplo: [1, {nome: "Ana"}, [5, 6]]. 
+Exemplos:
+JavaScript
+
+// Array indexado
+let numeros = [1, 2, 3, 4];
+console.log(numeros[0]); // Imprime 1
+
+// Array associativo
+let pessoa = {
+  nome: "Maria",
+  idade: 25
+};
+console.log(pessoa.nome); // Imprime "Maria"
+
+// Array multidimensional
+let matriz = [
+  [1, 2],
+  [3, 4]
+];
+console.log(matriz[0][1]); // Imprime 2
+
+// Mix de tudo
+let arrayComplexo = [
+  1,
+  { nome: "Pedro" },
+  [5, 6],
+  "Olá"
+];
+console.log(arrayComplexo[1].nome); // Imprime "Pedro"
+console.log(arrayComplexo[2][0]); // Imprime 5
+Em resumo: Os arrays são estruturas de dados versáteis que podem ser usadas para organizar e armazenar dados de diferentes tipos e complexidades. 
