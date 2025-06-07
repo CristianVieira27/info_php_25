@@ -336,13 +336,13 @@ Usado quando não sabemos exatamente o número de repetições, mas temos uma co
 
  Sintaxe:
 php
-Copiar código
+
 while (condição) {
     // Código a repetir
 }
 ✅ Exemplo:
 php
-Copiar código
+
 <?php
 $i = 1;
 while ($i <= 5) {
@@ -361,13 +361,13 @@ Semelhante ao while, mas garante que o código será executado pelo menos uma ve
 
 📌 Sintaxe:
 php
-Copiar código
+
 do {
     // Código a repetir
 } while (condição);
 ✅ Exemplo:
 php
-Copiar código
+
 <?php
 $i = 1;
 do {
@@ -379,136 +379,139 @@ do {
 Executa o bloco primeiro, depois verifica a condição.
 
 echo "<br><br><br>";
+<?php 
+$ano = 1998;
+$anoAtual = date("Y");
+$idade = $anoAtual - $ano;
 
 
-Em arrays, você pode ter: apenas valores, pares chave-valor, arrays multidimensionais e uma combinação de todos esses elementos. Os arrays podem ser unidimensionais ou multidimensionais, e podem armazenar diferentes tipos de dados. 
-Aprofundamento:
-Apenas Valores (Array Indexado):
-Um array que armazena uma lista de valores, acessíveis por índices numéricos (0, 1, 2, etc.). Por exemplo: [1, 2, "ola", 3.14]. 
-Chaves e Valores (Array Associativo):
-Um array que armazena pares de chaves e valores, onde as chaves podem ser de qualquer tipo (string, número, etc.). Por exemplo: {nome: "João", idade: 30}. 
-Arrays Multidimensionais:
-Arrays que contêm outros arrays. Isso permite criar estruturas de dados mais complexas, como matrizes ou tabelas. Por exemplo: [[1, 2], [3, 4]]. 
-Mix de Tudo:
-Um array pode conter uma mistura de tipos de dados, incluindo outros arrays e arrays associativos. Por exemplo: [1, {nome: "Ana"}, [5, 6]]. 
-Exemplos:
-JavaScript
+if($idade > 18){
+    echo "Usuário possuí idade maior que 18 anos. Sua idade é: $idade ";
+} else {
+    echo "Usuário possuí idade menor que 18 anos. Sua idade é: $idade ";
+}
 
-// Array indexado
-let numeros = [1, 2, 3, 4];
-console.log(numeros[0]); // Imprime 1
+echo "<br><br><br><br><br>";
 
-// Array associativo
-let pessoa = {
-  nome: "Maria",
-  idade: 25
-};
-console.log(pessoa.nome); // Imprime "Maria"
+$prova1 = 7;
+$prova2 = 8;
+$prova3 = 6;
+$prova4 = 7;
+$soma = ($prova1 + $prova2 + $prova3 + $prova4);
+$media = $soma / 4;
 
-// Array multidimensional
-let matriz = [
-  [1, 2],
-  [3, 4]
-];
-console.log(matriz[0][1]); // Imprime 2
+echo "A média do aluno é: $media <br>";
+if($media >= 7){
+    echo "Aprovado com média: $media";
+} else {
+    echo "Reprovado com média: $media";
+}
 
-// Mix de tudo
-let arrayComplexo = [
-  1,
-  { nome: "Pedro" },
-  [5, 6],
-  "Olá"
-];
-console.log(arrayComplexo[1].nome); // Imprime "Pedro"
-console.log(arrayComplexo[2][0]); // Imprime 5
-Em resumo: Os arrays são estruturas de dados versáteis que podem ser usadas para organizar e armazenar dados de diferentes tipos e complexidades. 
+echo "<br><br><br><br><br>";
 
-//funções para array
+$soma = ($prova1 + $prova2 + $prova3 + $prova4);
+$media = $soma / 4;
+
+// Média ponderada 
+
+$peso1 = 1;
+$peso2 = 2;
+$peso3 = 3;
+$peso4 = 4;
+$media_ponderada = (
+    $prova1 * $peso1 +
+    $prova2 * $peso2 +
+    $prova3 * $peso3 +
+    $prova4 * $peso4
+) / ($peso1 + $peso2 + $peso3 + $peso4);
+
+// Média harmônica
+
+$media_harmonica = 4 / (
+    (1/$prova1) +
+    (1/$prova2) +
+    (1/$prova3) +
+    (1/$prova4)
+);
+
+echo "A média do aluno é: $media <br>";
+echo "A média ponderada do aluno é: $media_ponderada <br>";
+echo "A média harmônica do aluno é: $media_harmonica <br>";
+
+if($media >= 7){
+    echo "Aprovado com média: $media";
+} else {
+    echo "Reprovado com média: $media";
+}
+
+?>
+
+<?php
+
+//Loop FOR
+📌 O que é o for?
+O loop for é usado para repetir um bloco de código um número conhecido de vezes.
 
 
-array — Cria um array
-array_all — Verifica se todos os elementos de um array satisfazem uma função de retorno
-array_any — Verifica se pelo menos um elemento de um array satisfaz uma função de retorno
-array_change_key_case — Modifica a caixa de todas as chaves em um array
-array_chunk — Divide um array em pedaços
-array_column — Retorna os valores de uma coluna do array informado
-array_combine — Cria um array usando um array para chaves e outro para valores
-array_count_values — Conta as ocorrências de cada valor distinto em um array
-array_diff — Computa as diferenças entre arrays
-array_diff_assoc — Computa a diferença entre arrays com checagem adicional de índice
-array_diff_key — Computa a diferença entre arrays usando as chaves na comparação
-array_diff_uassoc — Computa a diferença entre arrays com checagem adicional de índice que feita por uma função de callback fornecida pelo usuário
-array_diff_ukey — Computa a diferença entre arrays usando uma função callback na comparação de chaves
-array_fill — Preenche um array com valores
-array_fill_keys — Preenche um array com valores, especificando chaves
-array_filter — Filtra elementos de um array utilizando uma função callback
-array_find — Retorna um primeiro elemento que satisfaz uma função de retorno
-array_find_key — Retorna a chave do primeiro elemento que satisfaz uma função de retorno
-array_flip — Permuta todas as chaves e seus valores associados em um array
-array_intersect — Calcula a interseção entre arrays
-array_intersect_assoc — Computa a interseção de arrays com uma adicional verificação de índice
-array_intersect_key — Calcula a interseção de arrays, comparando pelas chaves
-array_intersect_uassoc — Computa a interseção de arrays com checagem de índice adicional, compara índices por uma função de callback
-array_intersect_ukey — Computa a interseção de arrays usando uma função de retorno nas chaves para comparação
-array_is_list — Verifica se um array é uma lista
-array_key_exists — Verifica se uma chave ou índice existe em um array
-array_key_first — Obtém a primeira chave de um array
-array_key_last — Obtém a última chave de um array
-array_keys — Retorna todas as chaves ou uma parte das chaves de um array
-array_map — Aplica uma função em todos os elementos dos arrays dados
-array_merge — Combina um ou mais arrays
-array_merge_recursive — Mescla um ou mais arrays recursivamente
-array_multisort — Ordena múltiplos arrays ou arrays multidimensionais
-array_pad — Expande um array para um certo comprimento utilizando um determinado valor
-array_pop — Extrai um elemento do final do array
-array_product — Calcula o produto dos valores de um array
-array_push — Adiciona um ou mais elementos no final de um array
-array_rand — Escolhe uma ou mais chaves aleatórias de um array
-array_reduce — Reduz um array para um único valor através de um processo iterativo via callback
-array_replace — Substitui elementos de arrays passados no primeiro array
-array_replace_recursive — Substitui elementos de arrays passado no primeiro array recursivamente
-array_reverse — Retorna um array com os elementos na ordem inversa
-array_search — Procura por um valor em um array e retorna sua chave correspondente caso seja encontrado
-array_shift — Retira o primeiro elemento de um array
-array_slice — Extrai uma parcela de um array
-array_splice — Remove uma parte array e a substitui por outra coisa
-array_sum — Calcula a soma dos elementos de um array
-array_udiff — Computa a diferença de arrays usando uma função de callback para comparação dos dados
-array_udiff_assoc — Computa a diferença entre arrays com verificação adicional de índice, comparando dados por uma função de retorno
-array_udiff_uassoc — Computa a diferença entre arrays com checagem adicional de índice, compara dados e índices por uma função de callback
-array_uintersect — Computa a interseção de array, comparando dados com uma função callback
-array_uintersect_assoc — Computa a interseção de arrays com checagem adicional de índice, compara os dados utilizando uma função de callback
-array_uintersect_uassoc — Computa a interseção de arrays com checagem adicional de índice, compara os dados e os índices utilizando funções de callback separadas
-array_unique — Remove os valores duplicados de um array
-array_unshift — Adiciona um ou mais elementos no início de um array
-array_values — Retorna todos os valores de um array
-array_walk — Aplica uma determinada função em cada elemento de um array
-array_walk_recursive — Aplica um função do usuário recursivamente para cada membro de um array
-arsort — Ordena um array em ordem descrescente e mantém a associação de índices
-asort — Ordena um array em ordem crescente e mantém a associação de índices
-compact — Cria um array contendo variáveis e seus valores
-count — Conta todos os elementos de um array ou de um objeto Countable
-current — Retorna o elemento atual em um array
-each — Retorna o par atual de chave e valor de um array e avança o seu cursor
-end — Define o ponteiro interno de um array para seu último elemento
-extract — Importa variáveis para a tabela de símbolos a partir de um array
-in_array — Verifica se um valor existe em um array
-key — Retorna uma chave de um array
-key_exists — Sinônimo de array_key_exists
-krsort — Ordena um array pelas chaves em ordem descrescente
-ksort — Ordena um array pelas chaves em ordem crescente
-list — Cria variáveis como se fossem arrays
-natcasesort — Ordena um array utilizando o algoritmo da "ordem natural" sem diferenciar maiúsculas e minúsculas
-natsort — Ordena um array utilizando o algoritmo de "ordem natural"
-next — Avança o ponteiro interno de um array
-pos — Sinônimo de current
-prev — Retrocede o ponteiro interno de um array
-range — Cria um array contendo uma faixa de elementos
-reset — Faz o ponteiro interno de um array apontar para o seu primeiro elemento
-rsort — Ordena um array em ordem descrescente
-shuffle — Embaralha um array
-sizeof — Sinônimo de count
-sort — Ordena um array em ordem ascendente
-uasort — Ordena um array com uma função de comparação definida pelo usuário e mantém associações de índices
-uksort — Ordena um array pelas chaves utilizando uma função de comparação definida pelo usuário.
-usort — Ordena um array pelos valores utilizando uma função de comparação definida pelo usuário
+for (início; condição; incremento) {
+    // código que será repetido
+}
+
+- início: valor inicial da variável (geralmente usada como contador).
+
+- condição: enquanto for verdadeira, o loop continua.
+
+- incremento: como o contador muda a cada repetição (ex: +1 ou -1).
+
+            Exemplo simples: Contar de 1 até 5
+php
+
+<?php
+for ($i = 1; $i <= 5; $i++) {
+    echo "Número: $i<br>";
+}
+?>
+
+//🔍 Explicação:
+$i = 1: começa com 1.
+
+$i <= 5: roda enquanto $i for menor ou igual a 5.
+
+$i++: aumenta $i em 1 a cada volta.
+
+
+//Loop While
+📌 O que é o while?
+O while é um tipo de laço que repete um bloco de código enquanto uma condição for verdadeira.
+
+
+while (condição) {
+    // código que será repetido
+}
+
+- A condição é verificada antes de cada repetição.
+
+- Se for falsa logo no início, o código não roda nenhuma vez.
+
+                    Exemplo: Contar de 1 até 5
+php
+
+<?php
+$i = 1;
+
+while ($i <= 5) {
+    echo "Número: $i<br>";
+    $i++;
+}
+?>
+🔍 Explicação:
+Começamos com $i = 1.
+
+Enquanto $i <= 5, o bloco dentro do while será executado.
+
+Cada vez que roda, mostra o número e aumenta $i com $i++
+
+🧠 Dica:
+Você pode usar while quando não sabe exatamente quantas vezes o código deve repetir, mas quer que continue enquanto uma condição for verdadeira.
+
+<br><br><br><br>
