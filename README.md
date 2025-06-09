@@ -10,7 +10,7 @@ file open folder: seleciona tudo e apaga
   verifica se esta em: /var/www/html/info_php_25
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ echo "<br><br><br>";
 </body>
 </html>
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 
@@ -43,7 +43,7 @@ divisao = a / b    # Divisão
 potencia = a ** 2  # Potenciação
 modulo = a % b     # Módulo (resto da divisão)
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 javascript
 let a = 10;
@@ -57,7 +57,7 @@ let potencia = a ** 2;
 let modulo = a % b;
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 
@@ -87,10 +87,9 @@ Exemplos com Operadores de comparação
 
 
     ?>
-    <br><br><br><br>
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 Exemplos com Operadores lógicos
@@ -152,7 +151,7 @@ Exemplos com Operadores de atribuição
     echo "A é igual a $a <br>";
 
     
-   echo "<br><br><br>";
+ <br><br><br><br>;
 
 
 
@@ -196,7 +195,7 @@ Exemplos com Operadores de atribuição
 
     ?>
 
-    echo "<br><br><br>";
+<br><br><br><br>;
 
 </body>
 </html>
@@ -226,7 +225,7 @@ Divisão:
 50,0 / 6 = 8,33
 Média Ponderada: A média ponderada do curso é 8,33. 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 
@@ -243,7 +242,7 @@ Soma dos inversos: 1/2 + 1/3 + 1/4 = 13/12
 Média harmônica: 3 / (13/12) = 36/13 ≈ 2.77.
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 // Ler 3 valores(A, B e C) e informar se eles sao iguais.
 $valorA = 10;
@@ -257,7 +256,7 @@ if ($valorA == $valorB && $valorA == $valorC) {
 }
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 /* Ler 3 valores(A, B e C) e informar ao usuario qual tipo de triangulo ele forma.
@@ -290,7 +289,7 @@ else {
 }
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 $multiplicador = 5;
@@ -302,7 +301,7 @@ for ($i = 0; $i <= 10; $i++) {
 }
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 
@@ -329,7 +328,7 @@ $i++: aumenta $i de 1 em 1
 ?>
 
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
  2. Loop while
 Usado quando não sabemos exatamente o número de repetições, mas temos uma condição.
@@ -353,7 +352,7 @@ while ($i <= 5) {
 🧠 Explicação:
 Verifica a condição antes de executar o código.
 
-echo "<br><br><br>";
+<br><br><br><br>;
 
 
 3. Loop do while
@@ -378,7 +377,7 @@ do {
 🧠 Diferença:
 Executa o bloco primeiro, depois verifica a condição.
 
-echo "<br><br><br>";
+<br><br><br><br>;
 <?php 
 $ano = 1998;
 $anoAtual = date("Y");
@@ -391,7 +390,7 @@ if($idade > 18){
     echo "Usuário possuí idade menor que 18 anos. Sua idade é: $idade ";
 }
 
-echo "<br><br><br><br><br>";
+<br><br><br><br>;
 
 $prova1 = 7;
 $prova2 = 8;
@@ -407,7 +406,7 @@ if($media >= 7){
     echo "Reprovado com média: $media";
 }
 
-echo "<br><br><br><br><br>";
+<br><br><br><br>;
 
 $soma = ($prova1 + $prova2 + $prova3 + $prova4);
 $media = $soma / 4;
@@ -446,7 +445,8 @@ if($media >= 7){
 
 ?>
 
-<?php
+
+    echo "<br><br><br><br><br>";
 
 //Loop FOR
 📌 O que é o for?
@@ -479,7 +479,10 @@ $i <= 5: roda enquanto $i for menor ou igual a 5.
 
 $i++: aumenta $i em 1 a cada volta.
 
+    echo "<br><br><br><br><br>";
 
+
+    
 //Loop While
 📌 O que é o while?
 O while é um tipo de laço que repete um bloco de código enquanto uma condição for verdadeira.
@@ -514,4 +517,51 @@ Cada vez que roda, mostra o número e aumenta $i com $i++
 🧠 Dica:
 Você pode usar while quando não sabe exatamente quantas vezes o código deve repetir, mas quer que continue enquanto uma condição for verdadeira.
 
-<br><br><br><br>
+<br><br><br><br>;
+
+📌 O que é o operador %?
+O operador % se chama módulo e serve para pegar o resto da divisão entre dois números.
+
+🧮 Exemplo simples:
+php
+
+<?php
+echo 10 % 3; // Resultado: 1
+?>
+Por quê?
+10 dividido por 3 dá 3 (com sobra de 1)
+
+Então: 10 % 3 = 1
+
+✅ Exemplos práticos:
+php
+
+<?php
+echo 15 % 5; // 0 (pois 15 divide exato por 5)
+echo "<br>";
+echo 9 % 2;  // 1 (9 dividido por 2 sobra 1)
+echo "<br>";
+echo 18 % 4; // 2 (18 dividido por 4 sobra 2)
+?>
+💡 Usando % com if (exemplo útil)
+Verificar se um número é par ou ímpar:
+
+php
+
+<?php
+$numero = 7;
+
+if ($numero % 2 == 0) {
+    echo "$numero é par";
+} else {
+    echo "$numero é ímpar";
+}
+?>
+🧠 Explicação:
+Um número par tem resto 0 quando dividido por 2: $numero % 2 == 0
+
+Se não for 0, é ímpar.
+
+<br><br><br><br>;
+
+

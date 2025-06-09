@@ -1,69 +1,89 @@
+<?php
+//LOOP FOR
 
-// $i = 0;
-// while ($i <= 10) {
-    
-//     $resultado = $multiplicador * $i;
-//     echo "$multiplicador * $i = $resultado" . "<br>";
-    
-//     $i++;
-// }
+for ($i = 0 ; $i <= 10; $i++)
+{
+    echo $i . "<br>";
+};
 
 
-//  + - * / %(modulo)
-
-$resultado = 10 / 2 ; // 5 Quociente
-$resultado = 10 % 2 ; // 0 resto da divisao
-
-$numero = 10;
-$resto = $numero % 2 ; // 1
-$par = $resto == 0; // verdade true
-
-
-
-
-// Encontrar os 20 primeiros numeros pares e exibi-los
-
-$contPares = 0;
-for ($numero = 2; $contPares < 20; $numero++) {
-    $resto = $numero % 2;
-    $par = $resto == 0;
-
-    if ($par) {
-        echo "O numero $numero é par! <br>";
-        $contPares++;
-    }
-}
+echo "<br><br>";
 ?>
 
-<br><br><br><br><br>
+
+<?php
+//LOOP FOR
+
+for($i = 10; $i >= 0; $i--)
+{
+    echo $i . "<br>";
+};
+
+echo "<br><br>";
+?>
 
 
 <?php
 
-
-$contador = 10;
-
-for ($contador <= 0 ; $contador >= 0; $$contador--) {
-    echo "$contador <br>";
+// Contagem de 1 a 10. (LOOP WHILE)
+$i = 0;
+while ($i <= 10)
+{
+    echo $i . "<br>";
+    $i++;
 }
-    echo "$$contador <br>";
+echo "<br><br>";
+?>
+
+
+<?php
+
+// Contagem de 10 a 0. (LOOP WHILE)
+$i = 10;
+while ($i >= 0)
+{
+    echo $i . "<br>";
+    $i--;
 }
+echo "<br><br>";
+?>
 
-// Encontrar os 5 primeiros numeros primos;
-// 2, 3, 5, 7, 11, 13, 17, 19,
-$contPrimos = 0;
+<?php
+// Encontrar os 5 primeiros numeros primos. (LOOP FOR)
 
-for ($numeroAvaliado = 3; $contPrimos < 5; $numeroAvaliado++) {
-    $penultimoNumero = $numeroAvaliado - 1;
-
-    for($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
-
-        $resto = $numeroAvaliado % $divisor;
-        $divisaoExata = $resto == 0;
-
-        if ($divisaoExata && $divisor < $penultimoNumero) {
-            break;
+$primos = 0;
+for ($i = 2; $primos < 5; $i++) {
+    $divisores = 0;
+    for ($j = 1; $j <= $i; $j++) {
+        if ($i % $j == 0) {
+            $divisores++;
         }
-
-        // implementar a logica
     }
+    if ($divisores == 2) {
+        echo $i . "<br>";
+        $primos++;
+    }
+}
+echo "<br><br>";
+
+?>
+
+<?php
+// Encontrar os 5 primeiros numeros primos. (LOOP WHILE)
+$primos = 0;
+$i = 2;
+while ($primos < 5) {
+    $divisores = 0;
+    for ($j = 1; $j <= $i; $j++) {
+        if ($i % $j == 0) {
+            $divisores++;
+        }
+    }
+    if ($divisores == 2) {
+        echo $i . "<br>";
+        $primos++;
+    }
+    $i++;
+}
+echo "<br><br>";
+?>
