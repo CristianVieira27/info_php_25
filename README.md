@@ -585,3 +585,22 @@ while ($primos < 5) { // Repete até encontrar 5 primos
     $num++; // Vai para o próximo número
 }
 echo "<br><br>";
+
+
+
+<?php
+$primos = 0;
+$num = 2;
+while ($primos < 5) {
+    $divisores = 0;
+    for ($i = 1; $i <= $num; $i++) {
+        if ($num % $i == 0) {
+            $divisores++;
+        }
+    }
+    if ($divisores == 2) {
+        echo $num . "<br>";
+        $primos++;
+    }
+    $num++;
+}
