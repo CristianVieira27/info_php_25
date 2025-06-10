@@ -69,24 +69,3 @@ while ($primos < 5) {
 }
 echo "<br><br>";
 ?>
-
-
-<?php
-// Encontrar os 5 primeiros numeros primos. (LOOP WHILE)
-$primos = 0;
-$i = 2;
-while ($primos < 5) {
-    $divisores = 0;
-    for ($j = 1; $j <= $i; $j++) {
-        if ($i % $j == 0) {
-            $divisores++;
-        }
-    }
-    if ($divisores == 2) {
-        echo $i . "<br>";
-        $primos++;
-    }
-    $i++;
-}
-echo "<br><br>";
-?>
