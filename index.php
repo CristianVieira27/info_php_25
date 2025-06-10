@@ -49,24 +49,27 @@ echo "<br><br>";
 ?>
 
 <?php
-// Encontrar os 5 primeiros numeros primos. (LOOP FOR)
+// Encontrar os 5 primeiros números primos (forma simplificada)
 
 $primos = 0;
-for ($i = 2; $primos < 5; $i++) {
-    $divisores = 0;
-    for ($j = 1; $j <= $i; $j++) {
-        if ($i % $j == 0) {
-            $divisores++;
+$num = 2;
+while ($primos < 5) {
+    $ehPrimo = true;
+    for ($i = 2; $i <= sqrt($num); $i++) {
+        if ($num % $i == 0) {
+            $ehPrimo = false;
+            break;
         }
     }
-    if ($divisores == 2) {
-        echo $i . "<br>";
+    if ($ehPrimo) {
+        echo $num . "<br>";
         $primos++;
     }
+    $num++;
 }
 echo "<br><br>";
-
 ?>
+
 
 <?php
 // Encontrar os 5 primeiros numeros primos. (LOOP WHILE)

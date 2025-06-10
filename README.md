@@ -565,3 +565,23 @@ Se não for 0, é ímpar.
 <br><br><br><br>;
 
 
+Detalhes sobre a contrução e a lógica 
+
+<?php
+$primos = 0; // Conta quantos primos já foram encontrados
+$num = 2;    // Começa a checar a partir do número 2 (primeiro primo)
+while ($primos < 5) { // Repete até encontrar 5 primos
+    $ehPrimo = true;  // Assume que o número é primo
+    for ($i = 2; $i <= sqrt($num); $i++) { // Testa divisores de 2 até a raiz quadrada de $num
+        if ($num % $i == 0) { // Se for divisível por algum número além de 1 e ele mesmo
+            $ehPrimo = false; // Não é primo
+            break;            // Para o for, pois já achou um divisor
+        }
+    }
+    if ($ehPrimo) { // Se continuou sendo primo
+        echo $num . "<br>"; // Imprime o número
+        $primos++;          // Conta mais um primo encontrado
+    }
+    $num++; // Vai para o próximo número
+}
+echo "<br><br>";
