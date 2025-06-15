@@ -119,37 +119,6 @@ Exemplos com Operadores lógicos
 
     echo "<br><br><br>";
 
-
-Exemplos com Operadores de atribuição
-    <?php
-    $a = 10;
-    $b = 20;
-
-    $a += $b; // $a = $a + $b
-    echo "A é igual a $a <br>";
-    $a -= $b; // $a = $a - $b
-    echo "A é igual a $a <br>";
-    $a *= $b; // $a = $a * $b
-    echo "A é igual a $a <br>";
-    $a /= $b; // $a = $a / $b
-    echo "A é igual a $a <br>";
-    $a %= $b; // $a = $a % $b
-    echo "A é igual a $a <br>";
-    $a **= $b; // $a = $a ** $b
-    echo "A é igual a $a <br>";
-    $a .= $b; // $a = $a . $b
-    echo "A é igual a $a <br>";
-    $a &= $b; // $a = $a & $b
-    echo "A é igual a $a <br>";
-    $a |= $b; // $a = $a | $b
-    echo "A é igual a $a <br>";
-    $a ^= $b; // $a = $a ^ $b
-    echo "A é igual a $a <br>";
-    $a <<= $b; // $a = $a << $b
-    echo "A é igual a $a <br>";
-    $a >>= $b; // $a = $a >> $b
-    echo "A é igual a $a <br>";
-
     
  <br><br><br><br>;
 
