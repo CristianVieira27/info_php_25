@@ -1,18 +1,26 @@
-abrir vscode
-ver se ta logado ubuntu (canto inferior esquerdo)
-file open folder: seleciona tudo e apaga
- - /var/www/html e da um ok
- terminal novo terminal 
- - git clone LINK_GITHUB da um enter
- file open folder: seleciona tudo e apaga
- - /var/www/html/info_php_25 e da um ok
- terminal novo terminal 
-  verifica se esta em: /var/www/html/info_php_25
+# Guia de Exemplos PHP, Python e JavaScript
 
+## Instruções iniciais
 
-<br><br><br><br>;
+1. Abrir o VSCode
+2. Verificar se está logado no Ubuntu (canto inferior esquerdo)
+3. `File > Open Folder`: selecione tudo e apague
+4. Selecione `/var/www/html` e clique em OK
+5. Abra um novo terminal
+6. Execute:
+   ```bash
+   git clone LINK_GITHUB
+   ```
+7. `File > Open Folder`: selecione tudo e apague
+8. Selecione `/var/www/html/info_php_25` e clique em OK
+9. Abra um novo terminal
+10. Verifique se está em `/var/www/html/info_php_25`
 
+---
 
+## Exemplo Olá Mundo em PHP
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,362 +33,274 @@ file open folder: seleciona tudo e apaga
     ?>
 </body>
 </html>
+```
 
-<br><br><br><br>;
+---
 
+## Operações matemáticas
 
-
-Operações matemáticas
-
-PHYTON
+### Python
+```python
 a = 10
 b = 5
-
 soma = a + b       # Adição
 subtracao = a - b  # Subtração
 multiplicacao = a * b  # Multiplicação
 divisao = a / b    # Divisão
 potencia = a ** 2  # Potenciação
 modulo = a % b     # Módulo (resto da divisão)
+```
 
-<br><br><br><br>;
-
-javascript
+### JavaScript
+```javascript
 let a = 10;
 let b = 5;
-
 let soma = a + b;
 let subtracao = a - b;
 let multiplicacao = a * b;
 let divisao = a / b;
 let potencia = a ** 2;
 let modulo = a % b;
+```
 
+### PHP
+```php
+$a = 10;
+$b = 5;
+$soma = $a + $b;
+$subtracao = $a - $b;
+$multiplicacao = $a * $b;
+$divisao = $a / $b;
+$potencia = $a ** 2;
+$modulo = $a % $b;
+```
 
-<br><br><br><br>;
+---
 
+## Operadores de comparação em PHP
 
+```php
+$a = 10;
+$b = 20;
 
-Exemplos com Operadores de comparação
-    <?php
-    $a = 10;
-    $b = 20;
+if ($a == $b) {
+    echo "A é igual a B";
+} else {
+    echo "A não é igual a B";
+}
+echo "<br>";
+if ($a != $b) {
+    echo "A é diferente de B";
+} else {
+    echo "A é igual a B";
+}
+echo "<br>";
+if ($a > $b) {
+    echo "A é maior que B";
+} else {
+    echo "A não é maior que B";
+}
+echo "<br>";
+```
 
-    if ($a == $b) {
-        echo "A é igual a B";
-    } else {
-        echo "A não é igual a B";
-    }
-    echo "<br>";
-    if ($a != $b) {
-        echo "A é diferente de B";
-    } else {
-        echo "A é igual a B";
-    }
-    echo "<br>";
-    if ($a > $b) {
-        echo "A é maior que B";
-    } else {
-        echo "A não é maior que B";
-    }
-    echo "<br>";
+---
 
+## Operadores lógicos em PHP
 
-    ?>
+```php
+$a = 10;
+$b = 20;
 
+if ($a == 10 && $b == 20) {
+    echo "A é igual a 10 e B é igual a 20";
+} else {
+    echo "A não é igual a 10 ou B não é igual a 20";
+}
+echo "<br>";
+if ($a == 10 || $b == 30) {
+    echo "A é igual a 10 ou B é igual a 30";
+} else {
+    echo "A não é igual a 10 e B não é igual a 30";
+}
+echo "<br>";
+if ($a == 10 xor $b == 30) {
+    echo "A é igual a 10 ou B é igual a 30, mas não os dois";
+} else {
+    echo "A não é igual a 10 e B não é igual a 30";
+}
+echo "<br>";
+```
 
-<br><br><br><br>;
+---
 
+## Exemplo de PHP com HTML
 
-Exemplos com Operadores lógicos
-    <?php
-    $a = 10;
-    $b = 20;
-
-    if ($a == 10 && $b == 20) {
-        echo "A é igual a 10 e B é igual a 20";
-    } else {
-        echo "A não é igual a 10 ou B não é igual a 20";
-    }
-    echo "<br>";
-    if ($a == 10 || $b == 30) {
-        echo "A é igual a 10 ou B é igual a 30";
-    } else {
-        echo "A não é igual a 10 e B não é igual a 30";
-    }
-    echo "<br>";
-    if ($a == 10 xor $b == 30) {
-        echo "A é igual a 10 ou B é igual a 30, mas não os dois";
-    } else {
-        echo "A não é igual a 10 e B não é igual a 30";
-    }
-    echo "<br>";
-    ?>
-
-    echo "<br><br><br>";
-
-    
- <br><br><br><br>;
-
-
-
-
-    <!DOCTYPE html>
-<html lang="en">
-
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de PHP com HTML</title>
 </head>
-
 <body>
     <h1>Seja bem vindo ao meu site!</h1>
-
     <?php 
     $nome = "Cristian";
     $idade = 27; 
-    
     echo "<p>Olá! Meu nome é $nome, tenho $idade anos!</p>";
     ?>
-    <br><br><br><br>
-
     <h2>Exemplos com Operadores aritméticos</h2>
     <?php
-
     $valorMultiplicacao = 7;
-
-    echo 1 * $valorMultiplicacao . "<br>";
-    echo 2 * $valorMultiplicacao . "<br>";
-    echo 3 * $valorMultiplicacao . "<br>";
-    echo 4 * $valorMultiplicacao . "<br>"; 
-    echo 5 * $valorMultiplicacao . "<br>";
-    echo 6 * $valorMultiplicacao . "<br>";
-    echo 7 * $valorMultiplicacao . "<br>"; 
-    echo 8 * $valorMultiplicacao . "<br>";
-    echo 9 * $valorMultiplicacao . "<br>";
-    echo 10 * $valorMultiplicacao . "<br>";
-    echo "<br>";
-
+    for ($i = 1; $i <= 10; $i++) {
+        echo $i * $valorMultiplicacao . "<br>";
+    }
     ?>
-
-<br><br><br><br>;
-
 </body>
 </html>
+```
 
-Para calcular a média ponderada, multiplica cada valor do conjunto por seu peso, soma esses produtos e divide pelo total dos pesos. Em outras palavras, a média ponderada dá mais importância a valores que têm maior peso. 
-Passos:
-Identificar os valores e seus pesos: Determine os valores que serão utilizados no cálculo e os pesos correspondentes a cada valor.
-Multiplicar cada valor pelo seu peso: Multiplique cada valor pelo seu peso correspondente.
-Soma dos produtos: Some todos os resultados das multiplicações.
-Soma dos pesos: Some todos os pesos.
-Dividir a soma dos produtos pela soma dos pesos: Divida o resultado do passo 3 pelo resultado do passo 4.
-O resultado é a média ponderada: O resultado final é a média ponderada do conjunto de valores. 
+---
+
+## Média ponderada
+
+Para calcular a média ponderada:
+1. Multiplique cada valor pelo seu peso.
+2. Some todos os resultados.
+3. Some todos os pesos.
+4. Divida a soma dos produtos pela soma dos pesos.
+
 Exemplo:
-Suponha que você tenha as seguintes notas em um curso, com os seus respectivos pesos:
-Prova 1: 8,0 (peso 2)
-Prova 2: 9,0 (peso 3)
-Trabalho: 7,0 (peso 1)
-Multiplicação:
-8,0 * 2 = 16,0
-9,0 * 3 = 27,0
-7,0 * 1 = 7,0
-Soma dos produtos:
-16,0 + 27,0 + 7,0 = 50,0
-Soma dos pesos:
-2 + 3 + 1 = 6
-Divisão:
-50,0 / 6 = 8,33
-Média Ponderada: A média ponderada do curso é 8,33. 
+- Prova 1: 8,0 (peso 2)
+- Prova 2: 9,0 (peso 3)
+- Trabalho: 7,0 (peso 1)
 
-<br><br><br><br>;
+```php
+$media_ponderada = (8.0*2 + 9.0*3 + 7.0*1) / (2+3+1); // Resultado: 8.33
+```
 
+---
 
+## Média harmônica
 
-Para calcular a média harmônica de um conjunto de valores, divide-se o número total de elementos pela soma dos inversos de cada elemento do conjunto. Em termos matemáticos, se tivermos n valores (x1, x2, ..., xn), a média harmônica (MH) é calculada como: 
-MH = n / (1/x1 + 1/x2 + ... + 1/xn). 
-Passo a passo:
-Encontrar os inversos de cada elemento: Para cada valor do conjunto, calcule o seu inverso (1/x).
-Soma dos inversos: Adicione todos os inversos calculados no passo anterior.
-Dividir o número de elementos pela soma: Divida o número total de elementos do conjunto pela soma dos inversos obtida no passo 2. O resultado é a média harmônica.
+A média harmônica de n valores (x1, x2, ..., xn):
+MH = n / (1/x1 + 1/x2 + ... + 1/xn)
+
 Exemplo:
-Considere o conjunto {2, 3, 4}. 
-Inversos: 1/2, 1/3, 1/4
-Soma dos inversos: 1/2 + 1/3 + 1/4 = 13/12
-Média harmônica: 3 / (13/12) = 36/13 ≈ 2.77.
+- Conjunto: {2, 3, 4}
 
+```php
+$media_harmonica = 3 / (1/2 + 1/3 + 1/4); // Resultado: ≈ 2.77
+```
 
-<br><br><br><br>;
+---
 
-// Ler 3 valores(A, B e C) e informar se eles sao iguais.
+## Verificar se 3 valores são iguais
+
+```php
 $valorA = 10;
 $valorB = 10;
 $valorC = 10;
 
 if ($valorA == $valorB && $valorA == $valorC) {
-    echo "Os 3 valores sao iguais.";
+    echo "Os 3 valores são iguais.";
 } else {
-    echo "Os valores sao diferentes";
+    echo "Os valores são diferentes";
 }
+```
 
+---
 
-<br><br><br><br>;
+## Tipo de triângulo
 
-
-/* Ler 3 valores(A, B e C) e informar ao usuario qual tipo de triangulo ele forma.
-    OU se não formam nenhum triangulo. 
-    Triangulos a considerar: equilatero, isoceles e escaleno 
-*/
+```php
 $valorA = 7;
 $valorB = 8;
 $valorC = 8;
 
-
 if ($valorA == $valorB && $valorA == $valorC) {
-    echo "Os valores informados formam um triangulo equilatero.";
-} 
-else if (
-    ($valorA == $valorB && $valorA > $valorC) ||
-    ($valorB == $valorC && $valorB > $valorA) ||
-    ($valorA == $valorC && $valorA > $valorB)
-    ) {
-    echo "Os valores informados formam um triangulo isoceles.";
+    echo "Equilátero";
+} elseif ($valorA == $valorB || $valorB == $valorC || $valorA == $valorC) {
+    echo "Isósceles";
+} elseif ($valorA != $valorB && $valorB != $valorC && $valorA != $valorC) {
+    echo "Escaleno";
+} else {
+    echo "Não formam um triângulo";
 }
-else if (
-    ($valorA != $valorB && $valorB != $valorC) &&
-    ($valorA + $valorB > $valorC)
-    ) {
-         echo "Os valores informados formam um triangulo escaleno.";
-    }
-else {
-    echo "Os valores informados NÃO formam um triangulo";
-}
+```
 
+---
 
-<br><br><br><br>;
+## Tabuada com for
 
-
+```php
 $multiplicador = 5;
-
 for ($i = 0; $i <= 10; $i++) {
     $resultado = $multiplicador * $i;
-
-    echo "$multiplicador * $i = $resultado" . "<br>";
+    echo "$multiplicador * $i = $resultado<br>";
 }
+```
 
+---
 
-<br><br><br><br>;
+## Estruturas de repetição
 
+### Loop for
 
-
- 1. Loop for
-Usado quando sabemos quantas vezes queremos repetir.
-
- Sintaxe:
-php
-
-for (início; condição; incremento) {
-    // Código a repetir
-
-<?php
+```php
 for ($i = 1; $i <= 5; $i++) {
     echo "Valor de i: $i <br>";
 }
+```
 
- Explicação:
-$i = 1: começa em 1
+### Loop while
 
-$i <= 5: repete até $i chegar a 5
-
-$i++: aumenta $i de 1 em 1
-?>
-
-
-<br><br><br><br>;
-
- 2. Loop while
-Usado quando não sabemos exatamente o número de repetições, mas temos uma condição.
-
- Sintaxe:
-php
-
-while (condição) {
-    // Código a repetir
-}
-✅ Exemplo:
-php
-
-<?php
+```php
 $i = 1;
 while ($i <= 5) {
     echo "Valor de i: $i <br>";
     $i++;
 }
-?>
-🧠 Explicação:
-Verifica a condição antes de executar o código.
+```
 
-<br><br><br><br>;
+### Loop do while
 
-
-3. Loop do while
-Semelhante ao while, mas garante que o código será executado pelo menos uma vez.
-
-📌 Sintaxe:
-php
-
-do {
-    // Código a repetir
-} while (condição);
-✅ Exemplo:
-php
-
-<?php
+```php
 $i = 1;
 do {
     echo "Valor de i: $i <br>";
     $i++;
 } while ($i <= 5);
-?>
-🧠 Diferença:
-Executa o bloco primeiro, depois verifica a condição.
+```
 
-<br><br><br><br>;
-<?php 
+---
+
+## Cálculo de idade
+
+```php
 $ano = 1998;
 $anoAtual = date("Y");
 $idade = $anoAtual - $ano;
 
-
 if($idade > 18){
-    echo "Usuário possuí idade maior que 18 anos. Sua idade é: $idade ";
+    echo "Usuário possui idade maior que 18 anos. Sua idade é: $idade ";
 } else {
-    echo "Usuário possuí idade menor que 18 anos. Sua idade é: $idade ";
+    echo "Usuário possui idade menor que 18 anos. Sua idade é: $idade ";
 }
+```
 
-<br><br><br><br>;
+---
 
+## Média simples, ponderada e harmônica
+
+```php
 $prova1 = 7;
 $prova2 = 8;
 $prova3 = 6;
 $prova4 = 7;
 $soma = ($prova1 + $prova2 + $prova3 + $prova4);
 $media = $soma / 4;
-
-echo "A média do aluno é: $media <br>";
-if($media >= 7){
-    echo "Aprovado com média: $media";
-} else {
-    echo "Reprovado com média: $media";
-}
-
-<br><br><br><br>;
-
-$soma = ($prova1 + $prova2 + $prova3 + $prova4);
-$media = $soma / 4;
-
-// Média ponderada 
 
 $peso1 = 1;
 $peso2 = 2;
@@ -392,8 +312,6 @@ $media_ponderada = (
     $prova3 * $peso3 +
     $prova4 * $peso4
 ) / ($peso1 + $peso2 + $peso3 + $peso4);
-
-// Média harmônica
 
 $media_harmonica = 4 / (
     (1/$prova1) +
@@ -411,153 +329,53 @@ if($media >= 7){
 } else {
     echo "Reprovado com média: $media";
 }
+```
 
-?>
+---
 
+## Operador módulo (%)
 
-    echo "<br><br><br><br><br>";
-
-//Loop FOR
-📌 O que é o for?
-O loop for é usado para repetir um bloco de código um número conhecido de vezes.
-
-
-for (início; condição; incremento) {
-    // código que será repetido
-}
-
-- início: valor inicial da variável (geralmente usada como contador).
-
-- condição: enquanto for verdadeira, o loop continua.
-
-- incremento: como o contador muda a cada repetição (ex: +1 ou -1).
-
-            Exemplo simples: Contar de 1 até 5
-php
-
-<?php
-for ($i = 1; $i <= 5; $i++) {
-    echo "Número: $i<br>";
-}
-?>
-
-//🔍 Explicação:
-$i = 1: começa com 1.
-
-$i <= 5: roda enquanto $i for menor ou igual a 5.
-
-$i++: aumenta $i em 1 a cada volta.
-
-    echo "<br><br><br><br><br>";
-
-
-    
-//Loop While
-📌 O que é o while?
-O while é um tipo de laço que repete um bloco de código enquanto uma condição for verdadeira.
-
-
-while (condição) {
-    // código que será repetido
-}
-
-- A condição é verificada antes de cada repetição.
-
-- Se for falsa logo no início, o código não roda nenhuma vez.
-
-                    Exemplo: Contar de 1 até 5
-php
-
-<?php
-$i = 1;
-
-while ($i <= 5) {
-    echo "Número: $i<br>";
-    $i++;
-}
-?>
-🔍 Explicação:
-Começamos com $i = 1.
-
-Enquanto $i <= 5, o bloco dentro do while será executado.
-
-Cada vez que roda, mostra o número e aumenta $i com $i++
-
-🧠 Dica:
-Você pode usar while quando não sabe exatamente quantas vezes o código deve repetir, mas quer que continue enquanto uma condição for verdadeira.
-
-<br><br><br><br>;
-
-📌 O que é o operador %?
-O operador % se chama módulo e serve para pegar o resto da divisão entre dois números.
-
-🧮 Exemplo simples:
-php
-
-<?php
+```php
 echo 10 % 3; // Resultado: 1
-?>
-Por quê?
-10 dividido por 3 dá 3 (com sobra de 1)
+echo 15 % 5; // 0
+echo 9 % 2;  // 1
+echo 18 % 4; // 2
 
-Então: 10 % 3 = 1
-
-✅ Exemplos práticos:
-php
-
-<?php
-echo 15 % 5; // 0 (pois 15 divide exato por 5)
-echo "<br>";
-echo 9 % 2;  // 1 (9 dividido por 2 sobra 1)
-echo "<br>";
-echo 18 % 4; // 2 (18 dividido por 4 sobra 2)
-?>
-💡 Usando % com if (exemplo útil)
-Verificar se um número é par ou ímpar:
-
-php
-
-<?php
+// Verificar se número é par ou ímpar
 $numero = 7;
-
 if ($numero % 2 == 0) {
     echo "$numero é par";
 } else {
     echo "$numero é ímpar";
 }
-?>
-🧠 Explicação:
-Um número par tem resto 0 quando dividido por 2: $numero % 2 == 0
+```
 
-Se não for 0, é ímpar.
+---
 
-<br><br><br><br>;
+## Números primos (duas formas)
 
-
-Detalhes sobre a contrução e a lógica 
-
-<?php
-$primos = 0; // Conta quantos primos já foram encontrados
-$num = 2;    // Começa a checar a partir do número 2 (primeiro primo)
-while ($primos < 5) { // Repete até encontrar 5 primos
-    $ehPrimo = true;  // Assume que o número é primo
-    for ($i = 2; $i <= sqrt($num); $i++) { // Testa divisores de 2 até a raiz quadrada de $num
-        if ($num % $i == 0) { // Se for divisível por algum número além de 1 e ele mesmo
-            $ehPrimo = false; // Não é primo
-            break;            // Para o for, pois já achou um divisor
+### Usando raiz quadrada
+```php
+$primos = 0;
+$num = 2;
+while ($primos < 5) {
+    $ehPrimo = true;
+    for ($i = 2; $i <= sqrt($num); $i++) {
+        if ($num % $i == 0) {
+            $ehPrimo = false;
+            break;
         }
     }
-    if ($ehPrimo) { // Se continuou sendo primo
-        echo $num . "<br>"; // Imprime o número
-        $primos++;          // Conta mais um primo encontrado
+    if ($ehPrimo) {
+        echo $num . "<br>";
+        $primos++;
     }
-    $num++; // Vai para o próximo número
+    $num++;
 }
-echo "<br><br>";
+```
 
-
-
-<?php
+### Usando contagem de divisores
+```php
 $primos = 0;
 $num = 2;
 while ($primos < 5) {
@@ -573,3 +391,63 @@ while ($primos < 5) {
     }
     $num++;
 }
+
+
+## Trabalhando com arrays (vetores) em PHP
+
+Você pode criar um array vazio ou já preenchido com valores:
+
+```php
+// Criando um array vazio
+$primos = []; // array vazio
+
+// Criando um array com os 5 primeiros números primos
+$primos = array(2, 3, 5, 7, 11);
+// Ou, de forma mais moderna:
+$primos = [2, 3, 5, 7, 11]; // índices: 0, 1, 2, 3, 4
+```
+
+Para percorrer e exibir os valores do array, utilize um laço `for`:
+
+```php
+for ($i = 0; $i < count($primos); $i++) {
+    $primo = $primos[$i];
+    echo "Primo: $primo" . "<br>";
+}
+```
+Neste exemplo, `count($primos)` retorna o tamanho do array e `$primos[$i]` acessa cada elemento.
+
+---
+
+## Verificando se uma palavra é palíndromo
+
+Um palíndromo é uma palavra que pode ser lida da mesma forma de trás para frente, como "radar" ou "arara". Veja como verificar isso em PHP:
+
+```php
+$palavra = "radar";
+$tamanho = strlen($palavra) - 1; // Posição do último caractere
+
+$a = 0;
+$ehPalindromo = true;
+
+for ($i = $tamanho; $i >= 0; $i--) {
+    $letra_1 = $palavra[$a];
+    $letra_2 = $palavra[$i];
+    $letrasIguais =  $letra_1 == $letra_2; // compara as letras nas posições opostas
+
+    if (!$letrasIguais) {
+        $ehPalindromo = false;
+        break;
+    }
+
+    $a++;
+}
+
+if ($ehPalindromo) {
+    echo "A palavra $palavra é um palíndromo.";
+} else {
+    echo "A palavra $palavra NÃO é palíndromo.";
+}
+```
+Neste código, comparamos as letras do início e do fim da palavra, avançando e recuando até o meio. Se todas as letras corresponderem, a palavra é um palíndromo.
+
