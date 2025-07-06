@@ -423,31 +423,57 @@ Neste exemplo, `count($primos)` retorna o tamanho do array e `$primos[$i]` acess
 
 Um palíndromo é uma palavra que pode ser lida da mesma forma de trás para frente, como "radar" ou "arara". Veja como verificar isso em PHP:
 
-```php
-$palavra = "radar";
-$tamanho = strlen($palavra) - 1; // Posição do último caractere
+Procurar uma palavra no meio da frase e informar se encontrou a mesma.
 
-$a = 0;
-$ehPalindromo = true;
+ $i
+ E s c o l a     i n f o s e r v        c u r s o   d e   P H P .
+ 0 1 2 3 4 5  6  7 8 9 10 11 12 13  14  15 16 17 18  19  20 21  22 23 24 25 26 27 28
 
-for ($i = $tamanho; $i >= 0; $i--) {
-    $letra_1 = $palavra[$a];
-    $letra_2 = $palavra[$i];
-    $letrasIguais =  $letra_1 == $letra_2; // compara as letras nas posições opostas
+$j
+ c u r s o
+ 0 1 2 3 4
 
-    if (!$letrasIguais) {
-        $ehPalindromo = false;
-        break;
+*/
+
+$palavraProcurada = "curso";
+$frase = "Escola infoserv curso de PHP."; // curso
+
+$tamanho = strlen($frase) - 1; // 28
+$tamanhoPalavra = strlen($palavraProcurada) - 1; // 28
+
+$tamanhoReal = $tamanho - $tamanhoPalavra;
+
+$palavraEncontrada = false;
+
+// percorre a frase toda, letra a letra
+for ($i = 0; $i <= $tamanhoReal; $i++) {
+
+    $letrasIguais = true;
+    
+    // percorre toda a palavra, letra a letra
+    for ($j = 0; $j <= $tamanhoPalavra; $j++) {
+        
+        $indiceAtualDaFrase = $i + $j;
+        // $k = $i + $j;
+
+        $letraAtualDaFrase = $frase[$indiceAtualDaFrase];
+        $letraAtualDaPalavra = $palavraProcurada[$j];
+
+        if ($letraAtualDaFrase != $letraAtualDaPalavra) {
+             $letrasIguais = false;
+            break;
+        } 
+
     }
 
-    $a++;
+    if ($letrasIguais) {
+        $palavraEncontrada = true;
+        break;
+    } 
 }
 
-if ($ehPalindromo) {
-    echo "A palavra $palavra é um palíndromo.";
+if ($palavraEncontrada) {
+    echo "Encontrou a palavra procurada.";
 } else {
-    echo "A palavra $palavra NÃO é palíndromo.";
+    echo "Não Encontrou.";
 }
-```
-Neste código, comparamos as letras do início e do fim da palavra, avançando e recuando até o meio. Se todas as letras corresponderem, a palavra é um palíndromo.
-
