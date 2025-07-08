@@ -25,31 +25,6 @@ if ($ano < 1 ){
 
 $diasmes = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-if ()
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 echo "<br>"; 
 /**
  * Calendario: usuario vai informar uma data, validar essa data,
