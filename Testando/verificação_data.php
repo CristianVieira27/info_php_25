@@ -1,29 +1,28 @@
 <?php
-// Dados de entrada (poderiam vir de um formulário, por exemplo)
+
 $dia = 29;
 $mes = 2;
 $ano = 2025;
 
-// Dias de cada mês. O índice 1 é Janeiro, 12 é Dezembro
 $diasPorMes = [
-    1 => 31, // Janeiro
-    2 => 28, // Fevereiro (ajustamos depois se for bissexto)
-    3 => 31, // Março
-    4 => 30, // Abril
-    5 => 31, // Maio
-    6 => 30, // Junho
-    7 => 31, // Julho
-    8 => 31, // Agosto
-    9 => 30, // Setembro
-    10 => 31, // Outubro
-    11 => 30, // Novembro
-    12 => 31  // Dezembro
+    1 => 31, 
+    2 => 28, 
+    3 => 31, 
+    4 => 30, 
+    5 => 31, 
+    6 => 30, 
+    7 => 31, 
+    8 => 31, 
+    9 => 30, 
+    10 => 31, 
+    11 => 30, 
+    12 => 31  
 ];
 
 // Verificando se o ano é bissexto
 if (($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0)) {
     $bissexto = true;
-    $diasPorMes[2] = 29; // Fevereiro com 29 dias
+    $diasPorMes[2] = 29; 
 } else {
     $bissexto = false;
 }
