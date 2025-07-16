@@ -1,55 +1,46 @@
 <?php
 
-function ordenarArray(array $dados, string $ordem) {
-
+function ordenarArray(array $dados, string $ordem = "DESC") {
     $tam = count($dados);
 
-    for($i = 0; $i < $tam - 1; $i++) {
-
-        for($j = 0; $j < $tam - 1; $j++) {
-
+    for ($i = 0; $i < $tam - 1; $i++) {
+        for ($j = 0; $j < $tam - 1; $j++) {
             $proximoIndice = $j + 1;
             $numeroAtual = $dados[$j];
             $proxNumero = $dados[$proximoIndice];
-        
-            if ($numeroAtual < $proxNumero) {
-                $aux = $numeroAtual;
-                $numeroAtual = $proxNumero;
-                $proxNumero = $aux;
-        
-                $dados[$j] = $numeroAtual;
-                $dados[$proximoIndice] = $proxNumero;
+
+            if (
+                ($ordem === "DESC" && $numeroAtual < $proxNumero) ||
+                ($ordem === "ASC" && $numeroAtual > $proxNumero)
+            ) {
+                // Troca os valores
+                $dados[$j] = $proxNumero;
+                $dados[$proximoIndice] = $numeroAtual;
             }
-        } // fim FOR $j
-    } // fim FOR $i
-
-    return $dados;
-} // fim funcao
-
-function exibirDados(array $dados) {
-    $tam = count($dados);
-
-    for ($i = 0; $i < $tam; $i++) {
-        echo "Array ordenado desc (maior -> menor): $dados[$i]" . "<br>";
+        }
     }
 
+    return $dados;
+}
+
+function exibirDados(array $dados, string $ordem = "DESC") {
+    $tam = count($dados);
+
+    echo "Array ordenado $ordem:<br>";
+    for ($i = 0; $i < $tam; $i++) {
+        echo $dados[$i] . "<br>";
+    }
     echo "<br>";
 }
 
-$numeros = [2,10, 20, 30, 60, 5,40, 50, 1, 500];
+$numeros = [2, 10, 20, 30, 60, 5, 40, 50, 1, 500];
 $alfa = ["A", "B", "C", "D", "E"];
 
-$numerosOrdenados = ordenarArray($numeros);
-$alfa = ordenarArray($alfa);
+$numerosOrdenadosDesc = ordenarArray($numeros, "DESC");
+$numerosOrdenadosAsc = ordenarArray($numeros, "ASC");
+$alfaDesc = ordenarArray($alfa, "DESC");
+$alfaAsc = ordenarArray($alfa, "ASC");
 
-exibirDados($numerosOrdenados);
-exibirDados($alfa);
-
-/**
- * Adicionar novo parametro na funcao de ordenarArray
- * sendo ele $ordem. ASC ou DESC
- * Se chamar a funcao com ASC => retornar os dados em crescente(asc)
- * menor => maior
- * Se chamar a funcao com DESC => retornar os dados em decrescente(desc)
- * maior => menor
- */
+exibirDados($numerosOrdenadosDesc, "DESC");
+exibirDados($numerosOrdenadosAsc, "ASC");
+exibirDados($alfaDesc, "DESC");
