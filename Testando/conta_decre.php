@@ -15,6 +15,7 @@ $tam = count($letras);
 
         }
     }
-
+echo '<br>';
 
   $numeros = ["10", "20", "30", "40", "55"];
+  $tam = count($numeros);
