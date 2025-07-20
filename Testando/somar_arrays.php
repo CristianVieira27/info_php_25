@@ -8,7 +8,7 @@ for ($i = 0; $i < count($numerosA); $i++) {
 
     $somaIndice = $numerosA[$i] + $numerosB[$i];
     $soma[] = $somaIndice;
-}
-for ($i = 0; $i < count($soma); $i++) {
+
     echo "$soma[$i]<br>";
 }
+    
