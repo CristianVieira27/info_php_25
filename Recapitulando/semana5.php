@@ -3,7 +3,7 @@ Funções em PHP
 //Crie uma função que receba dois números e retorne a soma.
 
 function soma($num1, $num2) {
-    retun $num1 + $num2;
+    return $num1 + $num2;
 }
 
 
