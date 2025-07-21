@@ -43,3 +43,4 @@ for ($j = 0; $j < $tam - 1; $j++) {
 echo "Array de números ordenado decrescente:<br>";
 foreach ($numeros as $numero) {
     echo $numero . "<br>";
+}
