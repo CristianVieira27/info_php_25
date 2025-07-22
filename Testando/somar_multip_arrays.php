@@ -11,7 +11,6 @@ for ($i = 0; $i < count($numerosA); $i++) {
 
     echo "$soma[$i]<br>";
 }
-    
 
 echo "<hr>";
 
@@ -27,5 +26,3 @@ for ($i = 0; $i < count($numerosA); $i++) {
 
     echo "$multiplicaIndice <br>";
 }
-
-?>

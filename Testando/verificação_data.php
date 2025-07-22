@@ -5,24 +5,24 @@ $mes = 2;
 $ano = 2025;
 
 $diasPorMes = [
-    1 => 31, 
-    2 => 28, 
-    3 => 31, 
-    4 => 30, 
-    5 => 31, 
-    6 => 30, 
-    7 => 31, 
-    8 => 31, 
-    9 => 30, 
-    10 => 31, 
-    11 => 30, 
-    12 => 31  
+    1 => 31,
+    2 => 28,
+    3 => 31,
+    4 => 30,
+    5 => 31,
+    6 => 30,
+    7 => 31,
+    8 => 31,
+    9 => 30,
+    10 => 31,
+    11 => 30,
+    12 => 31
 ];
 
 // Verificando se o ano é bissexto
 if (($ano % 4 == 0 && $ano % 100 != 0) || ($ano % 400 == 0)) {
     $bissexto = true;
-    $diasPorMes[2] = 29; 
+    $diasPorMes[2] = 29;
 } else {
     $bissexto = false;
 }
@@ -36,7 +36,7 @@ if (
     echo $bissexto ? "Ano bissexto\n" : "Ano comum\n";
 } else {
     echo "Data inválida: $dia/$mes/$ano\n";
-    
+
     // Corrige a data para a próxima data válida
     $dia++; // soma 1 dia
 
@@ -54,4 +54,3 @@ if (
 
     echo "Próxima data válida: $dia/$mes/$ano\n";
 }
-?>

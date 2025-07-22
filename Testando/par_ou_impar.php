@@ -9,4 +9,3 @@ else {
     echo " O número $num é ímpar!";
 }
 echo "<br>";
-?>

@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 $nome = "Cristian";
-$sobrenome = "Vieira"; 
+$sobrenome = "Vieira";
 const ESTADO = "RS";
 
 echo "Me chamo $nome $sobrenome! Eu sou do estado de ".ESTADO."<br>";
@@ -14,4 +14,3 @@ $idade = 27;
 $profissao = "Programador";
 echo "Me chamo $nome, tenho $idade anos e sou $profissao";
 echo "<br>";
-?>

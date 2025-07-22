@@ -12,4 +12,3 @@ else {
     echo "Reprovado!";
 }
 echo "<br>";
-?>

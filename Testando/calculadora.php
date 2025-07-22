@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $num1 = 15;
 $num2 = 3;
@@ -12,4 +12,3 @@ echo "$multiplicacao <br>";
 $divisao = $num1 / $num2;
 echo "$divisao <br>";
 echo "<br>";
-?>
