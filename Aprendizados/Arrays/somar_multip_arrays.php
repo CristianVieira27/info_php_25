@@ -8,8 +8,10 @@ for ($i = 0; $i < count($numerosA); $i++) {
 
     $somaIndice = $numerosA[$i] + $numerosB[$i];
     $soma[] = $somaIndice;
+}
+for ($i = 0; $i < count($soma); $i++) {
 
-    echo "$soma[$i]<br>";
+    echo $soma[$i] . "<br>";
 }
 
 echo "<hr>";
@@ -24,5 +26,7 @@ for ($i = 0; $i < count($numerosA); $i++) {
     $multiplicaIndice = $numerosA[$i] * $numerosB[$i];
     $multiplicar[] = $multiplicaIndice;
 
-    echo "$multiplicaIndice <br>";
+}
+for ($i = 0; $i < count($multiplicar); $i++) {
+    echo $multiplicar[$i] . "<br>";
 }
