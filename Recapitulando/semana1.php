@@ -21,5 +21,3 @@ $multiplicador = 2;
 
 $resultado = $preço * $multiplicador;
 echo "O dobro do valor é $resultado<br>";
-
-?>

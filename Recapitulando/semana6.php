@@ -1,5 +1,5 @@
- Formulários HTML + PHP
- <?php
+Formulários HTML + PHP
+<?php
 //Crie um formulário com nome e idade. Mostre uma mensagem com esses dados em PHP.
 
 
