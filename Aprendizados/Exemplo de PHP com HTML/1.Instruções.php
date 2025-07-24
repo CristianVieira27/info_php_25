@@ -15,14 +15,14 @@ interativas e inteligentes.
     <h1>Bem-vindo!</h1>
 
     <?php
-echo "<p>Hoje é " . date("d/m/Y") . "</p>";
-?>
+    echo "<p>Hoje é " . date("d/m/Y") . "</p>";
+    ?>
 
 </body>
 
 </html>
 
-➡️ O PHP fica entre <?php ... ?>, e o restante é HTML normal.
+➡️ O PHP fica entre <?php ?>, e o restante é HTML normal.
 
 🧾 Exemplo: Mostrar nome digitado pelo usuário
 1. HTML com formulário:
@@ -79,8 +79,8 @@ $nomes = ["Ana", "Bruno", "Carlos"];
 
 <ul>
     <?php
-foreach ($nomes as $nome) {
-    echo "<li>$nome</li>";
-}
-?>
+    foreach ($nomes as $nome) {
+        echo "<li>$nome</li>";
+    }
+    ?>
 </ul>
