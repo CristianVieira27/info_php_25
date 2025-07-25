@@ -71,3 +71,20 @@ array_values() Retorna todos os valores
 in_array() Verifica se um valor está no array
 sort() Ordena valores em ordem crescente
 asort() Ordena mantendo as chaves
+
+
+🔧 Funções úteis para Arrays
+Função Descrição
+count($array) Conta quantos elementos há no array
+array_push() Adiciona um item ao final do array
+array_pop() Remove o último item do array
+in_array() Verifica se um valor está no array
+sort() Ordena os valores do array
+print_r() Mostra o conteúdo do array (debug)
+
+Exemplo:
+<?php
+$numeros = [3, 1, 4, 1, 5, 9];
+sort($numeros);
+print_r($numeros);
+?>
