@@ -4,9 +4,7 @@
 4. Selecione `/var/www/html` e clique em OK
 5. Abra um novo terminal
 6. Execute:
-```bash
 git clone LINK_GITHUB
-```
 7. `File > Open Folder`: selecione tudo e apague
 8. Selecione `/var/www/html/info_php_25` e clique em OK
 9. Abra um novo terminal
