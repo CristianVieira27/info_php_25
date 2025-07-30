@@ -1,9 +1,9 @@
 <?php
 
-class Carro 
+class Carro
 {
     public $cor = "";
-    public $modelo = ""; 
+    public $modelo = "";
     public $ano = "";
     public $combustivel = "";
 
