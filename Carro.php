@@ -2,28 +2,44 @@
 
 class Carro
 {
+
     public $cor = "";
     public $modelo = "";
     public $ano = "";
     public $combustivel = "";
+    public $bateriaComCarga = true;
+    public $abastecido = true;
+    public $ligado = true;
 
-
-    public function buzinar()
+    public function ligar()
     {
-        echo "Bii, bii.<br>";
+        $this->ligado = false;
     }
 
+    public function desligar()
+    {
+        $this->ligado = false;
+    }
+    public function rodar()
+    {
+        $podeRodar = $this->abastecido && $this->bateriaComCarga && $this->ligado;
+
+        if ($podeRodar) {
+            echo "O carro pode rodar!";
+        } else {
+            echo "O carro está desligado. Ligue-o para poder rodar!";
+        }
+    }
     public function mostrar()
     {
-        echo "Carro modelo $this->modelo, na cor $this->cor do ano $this->ano, movido a $this->combustivel.<br>";
+        if ($this->ligado) {
+            echo "O carro pode rodar!";
+        } else {
+            echo "O carro está desligado. Ligue-o para poder rodar!";
+        }
     }
 }
 
 $objCarro = new Carro();
-$objCarro->cor = "Cinza";
-$objCarro->modelo = "Chevette";
-$objCarro->ano = 1990;
-$objCarro->combustivel = "Gasolina";
-
+$objCarro->ligar();
 $objCarro->mostrar();
-$objCarro->buzinar();
