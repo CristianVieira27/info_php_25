@@ -28,6 +28,7 @@ class Caneta
             echo "Destampe a caneta primeiro para usá-la!";
             return;
         }
+        echo "Escrevendo com a caneta {$this->cor} de ponta {$this->ponta}mm!";
     }
 }
 
