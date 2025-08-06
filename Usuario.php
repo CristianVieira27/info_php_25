@@ -1,6 +1,7 @@
 <?php
 
-class Usuario {
+class Usuario
+{
     public $id = 0;
     public $login = "";
     public $senha = "";
@@ -11,39 +12,43 @@ class Usuario {
     public $permissoes = "";
     public $logado = false;
 
-    public function logar($login, $senha){
+    public function logar($login, $senha)
+    {
         $this->login = $login;
         $this->senha = $senha;
 
         $senhaCrypto = hash('sha256', $this->senha);
     }
 
-    public function deslogar(){
+    public function deslogar()
+    {
         $this->logado = false;
     }
 
-    public function ativarUsuario($id, $status){
+    public function ativarUsuario($id, $status)
+    {
         $this->id = $id;
         $this->status = true;
-
-
     }
 
-    public function desativarUsuario($id, $status){
+    public function desativarUsuario($id, $status)
+    {
         $this->id = $id;
         $this->status = false;
     }
 
-    public function recuperarSenha($emailRecuper){
+    public function recuperarSenha($emailRecuper)
+    {
         $this->emailRecuper = $emailRecuper;
     }
 
-    public function alterarTipoPerfil($id, $tipoPerfil){
+    public function alterarTipoPerfil($id, $tipoPerfil)
+    {
         $this->tipoPerfil = $tipoPerfil;
     }
 
-    public function alterarPermissoes($permissoes){
+    public function alterarPermissoes($permissoes)
+    {
         $this->permissoes = $permissoes;
-
     }
 }

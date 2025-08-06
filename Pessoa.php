@@ -1,6 +1,7 @@
 <?php
 
-class Pessoa {
+class Pessoa
+{
 
     public $Nome = "";
     public $dataNascimento = "";
@@ -12,57 +13,85 @@ class Pessoa {
     public $escolaridade = "";
     public $telefone = "";
     public $email = "";
-    
-    public function obterNome(){
+
+    public function obterNome()
+    {
         return $this->nome;
     }
-    public function alterarNome($nome){
+    public function editarNome($nome)
+    {
         return $this->nome = $nome;
     }
-    public function obterDataDeNascimento(){
+    public function obterDataDeNascimento()
+    {
         return $this->dataNascimento;
     }
-    public function alterarDataDeNascimento(){
-        //Completar as funções da pessoa.
+    public function alterarDataDeNascimento($dataNascimento)
+    {
+        return $this->dataNascimento = $dataNascimento;
     }
-    public function obtersexo(){
+    public function obtersexo()
+    {
         return $this->sexo;
     }
-
-    public function editarSexo($sexo){
+    public function editarSexo($sexo)
+    {
         return $this->sexo = $sexo;
     }
-
-    public function estadoCivil(){
+    public function estadoCivil()
+    {
         return $this->estadoCivil;
     }
-
-    public function estadoCivilAtual($estadoCivil){
+    public function estadoCivilAtual($estadoCivil)
+    {
         return $this->estadoCivil = $estadoCivil;
     }
-
-    public function obterEscolaridade(){
-        return $this->escolaridade; 
+    public function obterNomeMae()
+    {
+        return $this->nomeMae;
     }
-
-    public function mudarEscolaridade($escolaridade){
+    public function editarNomeMae($nomeMae)
+    {
+        return $this->nomeMae = $nomeMae;
+    }
+    public function obterNomePai()
+    {
+        return $this->nomePai;
+    }
+    public function editarNomePai($nomePai)
+    {
+        return $this->nomePai = $nomePai;
+    }
+    public function obterCpf()
+    {
+        return $this->cpf;
+    }
+    public function editarCpf($cpf)
+    {
+        return $this->cpf = $cpf;
+    }
+    public function obterEscolaridade()
+    {
+        return $this->escolaridade;
+    }
+    public function mudarEscolaridade($escolaridade)
+    {
         return $this->escolaridade = $escolaridade;
     }
-
-    public function obterTelefone(){
+    public function obterTelefone()
+    {
         return $this->telefone;
-    
     }
-    public function mudarTelefone($telefone){
+    public function mudarTelefone($telefone)
+    {
         return $this->telefone = $telefone;
     }
-
-    public function obterEmail(){
+    public function obterEmail()
+    {
         return $this->email;
     }
-    public function mudarEmail($email){
-        return $this->email = $email; 
+    public function mudarEmail($email)
+    {
+        return $this->email = $email;
     }
-
-    
 }
