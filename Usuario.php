@@ -6,7 +6,7 @@ class Usuario
     public $login = "";
     public $senha = "";
     public $nomeUsuario = "";
-    public $emailRecuper = "";
+    public $emailRecuperacao = "";
     public $status = true;
     public $tipoPerfil = "";
     public $permissoes = "";
@@ -39,7 +39,7 @@ class Usuario
 
     public function recuperarSenha($emailRecuper)
     {
-        $this->emailRecuper = $emailRecuper;
+        $this->emailRecuperacao = $emailRecuper;
     }
 
     public function alterarTipoPerfil($id, $tipoPerfil)
