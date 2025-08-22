@@ -85,8 +85,8 @@ LOCK TABLES `pessoas` WRITE;
 /*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
 INSERT INTO `pessoas` VALUES
 (4,'cristian vieira','1998-02-02','M','SOLTEIRO','sol','zé','11111111111','ensino medio completo','11111111111','breezxyvieira_@gmail.com',1),
-(5,'sheldon cooper','1980-02-26','M','SOLTEIRO','mary','george','22222222222','superior completo','22222222222','sheldonc@gmail.com',2),
-(6,'new desenvolvedor','1975-02-16','M','SOLTEIRO','fulana','fulano','33333333333','superior completo','33333333333','programador@gmail.com',3);
+(5,'sheldon cooper','1980-02-26','M','CASADO','mary','george','22222222222','superior completo','22222222222','sheldonc@gmail.com',2),
+(6,'new desenvolvedor','1975-02-16','M','VIÚVO','fulana','fulano','33333333333','superior completo','33333333333','programador@gmail.com',3);
 /*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-08-22  1:37:15
+-- Dump completed on 2025-08-22  2:00:24
