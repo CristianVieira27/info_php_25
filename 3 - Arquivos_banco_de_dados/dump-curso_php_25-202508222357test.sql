@@ -36,7 +36,7 @@ CREATE TABLE `enderecos` (
   `tipo_endereco` varchar(100) NOT NULL,
   `id_pessoas` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,8 +46,9 @@ CREATE TABLE `enderecos` (
 LOCK TABLES `enderecos` WRITE;
 /*!40000 ALTER TABLE `enderecos` DISABLE KEYS */;
 INSERT INTO `enderecos` VALUES
-(2,'garfield heights','los rebles avenue','apartamento',4,'pasadena','ca','90001','eua','apartamento',NULL),
-(3,'coqueiros','Avenida Almirante Tamandaré','casa',78,'florianopolis','sc','88080-160','brasil','residencial',NULL);
+(4,'municipal','balduino alegretti','casa',47,'bento goncalves','rs','95701-290','brasil','residencial',1),
+(5,'garfield heights','los rebles avenue','apartamento',4,'pasadena','ca','90001','eua','residencial',2),
+(6,'coqueiros','avenida almirante tamandare','casa',78,'florianopolis','sc','88080-160','brasil','residencial',3);
 /*!40000 ALTER TABLE `enderecos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-08-22 23:26:35
+-- Dump completed on 2025-08-22 23:57:33
