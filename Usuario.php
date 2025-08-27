@@ -1,5 +1,7 @@
 <?php
 
+require_once "./Model.php";
+
 class Usuario
 {
     public $id = 0;
@@ -11,6 +13,25 @@ class Usuario
     public $tipoPerfil = "";
     public $permissoes = "";
     public $logado = false;
+    private $modelUsuario = null;
+
+    public function __construct($model)
+    {
+        $this->modelUsuario = $model;
+    }
+
+    public function listarUsuarios() {
+            $sql = "SELECT * FROM usuarios";
+    }
+    public function buscarUsuarios($id) {
+        $sql = "SELECT * FROM usuarios FROM id=$id";
+
+        $usuarios = $this->modelUsuario->ReadOn($sql);
+
+        foreach ($usuarios AS $idx => $usuario) {
+            echo $usuario->login . "<br>";
+        }
+    }
 
     public function logar($login, $senha)
     {
@@ -52,3 +73,10 @@ class Usuario
         $this->permissoes = $permissoes;
     }
 }
+
+
+$usuario = new Usuario($model);
+$usuario->listarUsuarios();
+
+$usuario->buscarUsuarios(1);
+
