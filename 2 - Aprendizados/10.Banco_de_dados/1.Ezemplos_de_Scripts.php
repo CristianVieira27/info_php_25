@@ -1,3 +1,5 @@
+<?php
+
 
 <?php
 /* meu script
@@ -37,4 +39,3 @@ SELECT * FROM pessoas p;
 
 SELECT * FROM enderecos e;
 */
-?>

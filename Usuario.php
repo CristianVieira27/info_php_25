@@ -1,6 +1,7 @@
 <?php
 
 require_once "./Model.php";
+require_once "./BancoDados.php";
 
 class Usuario
 {
@@ -20,63 +21,98 @@ class Usuario
         $this->modelUsuario = $model;
     }
 
-    public function listarUsuarios() {
-            $sql = "SELECT * FROM usuarios";
+    // =========================
+    // CREATE
+    // =========================
+    public function criarUsuario($login, $senha, $nome, $email, $tipoPerfil, $permissoes)
+    {
+        $senhaCrypto = hash('sha256', $senha);
+
+        $sql = "INSERT INTO usuarios (login, senha, nomeUsuario, emailRecuperacao, status, tipoPerfil, permissoes)
+                VALUES (:login, :senha, :nomeUsuario, :emailRecuperacao, :status, :tipoPerfil, :permissoes)";
+
+        $params = [
+            ":login" => $login,
+            ":senha" => $senhaCrypto,
+            ":nomeUsuario" => $nome,
+            ":emailRecuperacao" => $email,
+            ":status" => 1,
+            ":tipoPerfil" => $tipoPerfil,
+            ":permissoes" => $permissoes
+        ];
+
+        return $this->modelUsuario->Create($sql, $params);
     }
-    public function buscarUsuarios($id) {
-        $sql = "SELECT * FROM usuarios FROM id=$id";
 
-        $usuarios = $this->modelUsuario->ReadOn($sql);
+    // =========================
+    // READ ALL
+    // =========================
+    public function listarUsuarios()
+    {
+        $sql = "SELECT * FROM usuarios";
+        $usuarios = $this->modelUsuario->ReadAll($sql);
 
-        foreach ($usuarios AS $idx => $usuario) {
-            echo $usuario->login . "<br>";
+        foreach ($usuarios as $usuario) {
+            echo $usuario['login'] . "<br>";
+            echo $usuario['nomeUsuario'] . "<br>";
+            echo $usuario['status'] . "<br><br>";
         }
     }
 
-    public function logar($login, $senha)
+    // =========================
+    // READ ONE
+    // =========================
+    public function buscarUsuario($id)
     {
-        $this->login = $login;
-        $this->senha = $senha;
+        $sql = "SELECT * FROM usuarios WHERE id = :id";
+        $params = [":id" => $id];
+        $usuario = $this->modelUsuario->ReadOne($sql, $params);
 
-        $senhaCrypto = hash('sha256', $this->senha);
+        if ($usuario) {
+            echo $usuario['login'] . "<br>";
+            echo $usuario['nomeUsuario'] . "<br>";
+            echo $usuario['status'] . "<br><br>";
+        } else {
+            echo "Usuário não encontrado.";
+        }
     }
 
-    public function deslogar()
+    // =========================
+    // UPDATE
+    // =========================
+    public function atualizarUsuario($id, $login, $nome, $email, $tipoPerfil, $permissoes, $status)
     {
-        $this->logado = false;
+        $sql = "UPDATE usuarios 
+                SET login = :login, nomeUsuario = :nomeUsuario, emailRecuperacao = :emailRecuperacao, 
+                    tipoPerfil = :tipoPerfil, permissoes = :permissoes, status = :status 
+                WHERE id = :id";
+
+        $params = [
+            ":id" => $id,
+            ":login" => $login,
+            ":nomeUsuario" => $nome,
+            ":emailRecuperacao" => $email,
+            ":tipoPerfil" => $tipoPerfil,
+            ":permissoes" => $permissoes,
+            ":status" => $status
+        ];
+
+        return $this->modelUsuario->Update($sql, $params);
     }
 
-    public function ativarUsuario($id, $status)
+    // =========================
+    // DELETE
+    // =========================
+    public function excluirUsuario($id)
     {
-        $this->id = $id;
-        $this->status = true;
-    }
+        $sql = "DELETE FROM usuarios WHERE id = :id";
+        $params = [":id" => $id];
 
-    public function desativarUsuario($id, $status)
-    {
-        $this->id = $id;
-        $this->status = false;
-    }
+        $usuarioExcluido = $this->modelUsuario->Delete($sql, $params);
 
-    public function recuperarSenha($emailRecuper)
-    {
-        $this->emailRecuperacao = $emailRecuper;
-    }
-
-    public function alterarTipoPerfil($id, $tipoPerfil)
-    {
-        $this->tipoPerfil = $tipoPerfil;
-    }
-
-    public function alterarPermissoes($permissoes)
-    {
-        $this->permissoes = $permissoes;
+        echo $usuarioExcluido ? "Usuário excluído." : "Não foi possível excluir o usuário.";
     }
 }
 
-
+$model = new Model($bancoDados);
 $usuario = new Usuario($model);
-$usuario->listarUsuarios();
-
-$usuario->buscarUsuarios(1);
-

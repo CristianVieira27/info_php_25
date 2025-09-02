@@ -2,15 +2,16 @@
 
 require_once "./Conexao.php";
 
-class BancoDados {
+class BancoDados
+{
 
     private $conexao;
-    
+
     public function __construct($conexao)
     {
-        $this->conexao= $conexao;
+        $this->conexao = $conexao;
     }
-    
+
     public function fecharConexao()
     {
         $this->conexao->close();
@@ -24,7 +25,7 @@ class BancoDados {
         $isUpdate = str_contains($sql, "UPDATE");
 
         $result = $this->conexao->query($sql);
-        
+
         if ($isCreate) {
             return $this->conexao->insert_id;
         }
@@ -47,22 +48,23 @@ class BancoDados {
         return $dados;
     }
 
-    public function execQuery($sql, $msg = "Não foi possivel obter os dados.") {
+    public function execQuery($sql, $msg = "Não foi possivel obter os dados.")
+    {
 
-        $sql .=";";
+        $sql .= ";";
         $dados = $this->executar($sql);
 
         if (empty($dados)) {
             throw new Exception($msg);
         }
-        
+
         return $dados;
     }
 }
 
 $bancoDeDados = new BancoDados($conexao);
 
-
+?>
 
 
 
@@ -70,7 +72,8 @@ $bancoDeDados = new BancoDados($conexao);
 
 require_once "./Model.php";
 
-class Usuario {
+class Usuario
+{
     public $id = 0;
     public $login = "";
     public $senha = "";
@@ -87,35 +90,36 @@ class Usuario {
         $this->modelUsuario = $model;
     }
 
-    public function listarUsuarios() {
+    public function listarUsuarios()
+    {
         $sql = "SELECT * FROM usuarios";
 
         $usuarios = $this->modelUsuario->Read($sql);
 
         foreach ($usuarios as $idx => $usuario) {
-            echo $usuario->login . "<br>" ;
-            echo $usuario->nome_usuario . "<br>" ;
-            echo $usuario->status . "<br>" ;
+            echo $usuario->login . "<br>";
+            echo $usuario->nome_usuario . "<br>";
+            echo $usuario->status . "<br>";
             echo "<br>";
         }
-
     }
 
-    public function buscarUsuario($id) {
+    public function buscarUsuario($id)
+    {
         $sql = "SELECT * FROM usuarios WHERE id=$id";
 
         $usuarios = $this->modelUsuario->ReadOne($sql);
 
         foreach ($usuarios as $idx => $usuario) {
-            echo $usuario->login . "<br>" ;
-            echo $usuario->nome_usuario . "<br>" ;
-            echo $usuario->status . "<br>" ;
+            echo $usuario->login . "<br>";
+            echo $usuario->nome_usuario . "<br>";
+            echo $usuario->status . "<br>";
             echo "<br>";
         }
-
     }
 
-    public function excluirUsuario($id) {
+    public function excluirUsuario($id)
+    {
         $sql = "DELETE FROM usuarios WHERE id=$id";
 
         $usuarioExcluido = $this->modelUsuario->Delete($sql);
@@ -123,52 +127,57 @@ class Usuario {
         echo $usuarioExcluido ? "Usuário excluído." : "Não foi possível excluir o usuário.";
     }
 
-    public function logar($login, $senha) { 
+    public function logar($login, $senha)
+    {
         $seed = "Ab4cax1#456B3nt0";
 
         $this->login = $login;
         $this->senha = $senha . $seed;
 
         $senhaCrypto = hash('sha256', $this->senha);
-       
+
         // obter a senha do banco pelo $login
-       $senhaBanco = "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e730";
-       
-       $senhasIguais = $senhaCrypto === $senhaBanco;
+        $senhaBanco = "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e730";
 
-       if ($senhasIguais) {
-           $this->logado = true;
-         // redirect home/pagina inicial
-       } else {
-         // redirect login
-       }
+        $senhasIguais = $senhaCrypto === $senhaBanco;
 
+        if ($senhasIguais) {
+            $this->logado = true;
+            // redirect home/pagina inicial
+        } else {
+            // redirect login
+        }
     }
-    
-    public function deslogar() {
+
+    public function deslogar()
+    {
         $this->logado = false;
     }
 
-    public function ativarUsuario($id, $status) {
+    public function ativarUsuario($id, $status)
+    {
         $this->status = true;
     }
 
-    public function desativarUsuario($id, $status) {
+    public function desativarUsuario($id, $status)
+    {
         $this->status = false;
     }
 
-    public function recuperarSenha($emailRecuperacao) {
+    public function recuperarSenha($emailRecuperacao)
+    {
         $this->emailRecuperacao = $emailRecuperacao;
     }
 
-    public function alterarTipoPerfil($id, $tipoPerfil) {
+    public function alterarTipoPerfil($id, $tipoPerfil)
+    {
         $this->tipoPerfil = $tipoPerfil;
     }
 
-    public function alterarPermissoes($id, $permissoes) {
-         $this->permissoes = $permissoes;
+    public function alterarPermissoes($id, $permissoes)
+    {
+        $this->permissoes = $permissoes;
     }
-
 }
 
 $usuario = new Usuario($model);
