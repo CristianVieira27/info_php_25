@@ -1,7 +1,6 @@
 <?php
 
 require_once "./Model.php";
-require_once "./BancoDados.php";
 
 class Usuario
 {
@@ -21,65 +20,34 @@ class Usuario
         $this->modelUsuario = $model;
     }
 
-    // =========================
-    // CREATE
-    // =========================
-    public function criarUsuario($login, $senha, $nome, $email, $tipoPerfil, $permissoes)
-    {
-        $senhaCrypto = hash('sha256', $senha);
-
-        $sql = "INSERT INTO usuarios (login, senha, nomeUsuario, emailRecuperacao, status, tipoPerfil, permissoes)
-                VALUES (:login, :senha, :nomeUsuario, :emailRecuperacao, :status, :tipoPerfil, :permissoes)";
-
-        $params = [
-            ":login" => $login,
-            ":senha" => $senhaCrypto,
-            ":nomeUsuario" => $nome,
-            ":emailRecuperacao" => $email,
-            ":status" => 1,
-            ":tipoPerfil" => $tipoPerfil,
-            ":permissoes" => $permissoes
-        ];
-
-        return $this->modelUsuario->Create($sql, $params);
-    }
-
-    // =========================
-    // READ ALL
-    // =========================
     public function listarUsuarios()
     {
         $sql = "SELECT * FROM usuarios";
-        $usuarios = $this->modelUsuario->ReadAll($sql);
 
-        foreach ($usuarios as $usuario) {
-            echo $usuario['login'] . "<br>";
-            echo $usuario['nomeUsuario'] . "<br>";
-            echo $usuario['status'] . "<br><br>";
+        $usuarios = $this->modelUsuario->Read($sql);
+
+        foreach ($usuarios as $idx => $usuario) {
+            echo $usuario->login . "<br>";
+            echo $usuario->nome_usuario . "<br>";
+            echo $usuario->status . "<br>";
+            echo "<br>";
         }
     }
 
-    // =========================
-    // READ ONE
-    // =========================
     public function buscarUsuario($id)
     {
-        $sql = "SELECT * FROM usuarios WHERE id = :id";
-        $params = [":id" => $id];
-        $usuario = $this->modelUsuario->ReadOne($sql, $params);
+        $sql = "SELECT * FROM usuarios WHERE id=$id";
 
-        if ($usuario) {
-            echo $usuario['login'] . "<br>";
-            echo $usuario['nomeUsuario'] . "<br>";
-            echo $usuario['status'] . "<br><br>";
-        } else {
-            echo "Usuário não encontrado.";
+        $usuarios = $this->modelUsuario->ReadOne($sql);
+
+        foreach ($usuarios as $idx => $usuario) {
+            echo $usuario->login . "<br>";
+            echo $usuario->nome_usuario . "<br>";
+            echo $usuario->status . "<br>";
+            echo "<br>";
         }
     }
 
-    // =========================
-    // UPDATE
-    // =========================
     public function atualizarUsuario($id, $login, $nome, $email, $tipoPerfil, $permissoes, $status)
     {
         $sql = "UPDATE usuarios 
@@ -100,19 +68,69 @@ class Usuario
         return $this->modelUsuario->Update($sql, $params);
     }
 
-    // =========================
-    // DELETE
-    // =========================
     public function excluirUsuario($id)
     {
-        $sql = "DELETE FROM usuarios WHERE id = :id";
-        $params = [":id" => $id];
+        $sql = "DELETE FROM usuarios WHERE id=$id";
 
-        $usuarioExcluido = $this->modelUsuario->Delete($sql, $params);
+        $usuarioExcluido = $this->modelUsuario->Delete($sql);
 
         echo $usuarioExcluido ? "Usuário excluído." : "Não foi possível excluir o usuário.";
     }
+
+    public function logar($login, $senha)
+    {
+        $seed = "Ab4cax1#456B3nt0";
+
+        $this->login = $login;
+        $this->senha = $senha . $seed;
+
+        $senhaCrypto = hash('sha256', $this->senha);
+
+        // obter a senha do banco pelo $login
+        $senhaBanco = "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e730";
+
+        $senhasIguais = $senhaCrypto === $senhaBanco;
+
+        if ($senhasIguais) {
+            $this->logado = true;
+            // redirect home/pagina inicial
+        } else {
+            // redirect login
+        }
+    }
+
+    public function deslogar()
+    {
+        $this->logado = false;
+    }
+
+    public function ativarUsuario($id, $status)
+    {
+        $this->status = true;
+    }
+
+    public function desativarUsuario($id, $status)
+    {
+        $this->status = false;
+    }
+
+    public function recuperarSenha($emailRecuperacao)
+    {
+        $this->emailRecuperacao = $emailRecuperacao;
+    }
+
+    public function alterarTipoPerfil($id, $tipoPerfil)
+    {
+        $this->tipoPerfil = $tipoPerfil;
+    }
+
+    public function alterarPermissoes($id, $permissoes)
+    {
+        $this->permissoes = $permissoes;
+    }
 }
 
-$model = new Model($bancoDados);
 $usuario = new Usuario($model);
+$usuario->listarUsuarios();
+$usuario->buscarUsuario(1);
+$usuario->excluirUsuario(10);
