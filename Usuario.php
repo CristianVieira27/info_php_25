@@ -20,6 +20,10 @@ class Usuario
         $this->modelUsuario = $model;
     }
 
+    public function criarUsuario(){
+
+        throw new Exception(401, "O usuário não está autorizado");
+    }
     public function listarUsuarios()
     {
         $sql = "SELECT * FROM usuarios";
