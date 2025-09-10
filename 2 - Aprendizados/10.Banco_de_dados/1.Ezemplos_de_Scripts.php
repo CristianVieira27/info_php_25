@@ -1,7 +1,5 @@
 <?php
 
-
-<?php
 /* meu script
 
  CRUD

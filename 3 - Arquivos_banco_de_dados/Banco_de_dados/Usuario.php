@@ -20,35 +20,33 @@ class Usuario
         $this->modelUsuario = $model;
     }
 
-    public function criarUsuario(){
-
-        throw new Exception(401, "O usuário não está autorizado");
+    public function criarUsuario()
+    {
+        throw new Exception("O usuário não está autorizado", 401);
     }
+
     public function listarUsuarios()
     {
         $sql = "SELECT * FROM usuarios";
-
         $usuarios = $this->modelUsuario->Read($sql);
 
-        foreach ($usuarios as $idx => $usuario) {
+        foreach ($usuarios as $usuario) {
             echo $usuario->login . "<br>";
-            echo $usuario->nome_usuario . "<br>";
-            echo $usuario->status . "<br>";
-            echo "<br>";
+            echo $usuario->nomeUsuario . "<br>";
+            echo $usuario->status . "<br><br>";
         }
     }
 
     public function buscarUsuario($id)
     {
-        $sql = "SELECT * FROM usuarios WHERE id=$id";
+        $sql = "SELECT * FROM usuarios WHERE id = :id";
+        $params = [":id" => $id];
+        $usuarios = $this->modelUsuario->ReadOne($sql, $params);
 
-        $usuarios = $this->modelUsuario->ReadOne($sql);
-
-        foreach ($usuarios as $idx => $usuario) {
+        foreach ($usuarios as $usuario) {
             echo $usuario->login . "<br>";
-            echo $usuario->nome_usuario . "<br>";
-            echo $usuario->status . "<br>";
-            echo "<br>";
+            echo $usuario->nomeUsuario . "<br>";
+            echo $usuario->status . "<br><br>";
         }
     }
 
@@ -74,9 +72,10 @@ class Usuario
 
     public function excluirUsuario($id)
     {
-        $sql = "DELETE FROM usuarios WHERE id=$id";
+        $sql = "DELETE FROM usuarios WHERE id = :id";
+        $params = [":id" => $id];
 
-        $usuarioExcluido = $this->modelUsuario->Delete($sql);
+        $usuarioExcluido = $this->modelUsuario->Delete($sql, $params);
 
         echo $usuarioExcluido ? "Usuário excluído." : "Não foi possível excluir o usuário.";
     }
@@ -93,13 +92,11 @@ class Usuario
         // obter a senha do banco pelo $login
         $senhaBanco = "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e730";
 
-        $senhasIguais = $senhaCrypto === $senhaBanco;
-
-        if ($senhasIguais) {
+        if ($senhaCrypto === $senhaBanco) {
             $this->logado = true;
-            // redirect home/pagina inicial
+            echo "Login efetuado!";
         } else {
-            // redirect login
+            echo "Usuário ou senha inválidos!";
         }
     }
 
@@ -134,7 +131,9 @@ class Usuario
     }
 }
 
+$model = new Model();
 $usuario = new Usuario($model);
+
 $usuario->listarUsuarios();
 $usuario->buscarUsuario(1);
 $usuario->excluirUsuario(10);
