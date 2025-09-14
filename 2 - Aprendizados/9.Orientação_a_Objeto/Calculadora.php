@@ -36,5 +36,11 @@ $objCalculadora = new Calculadora();
 $objCalculadora->somar(10, 10);
 $objCalculadora->exibir();
 
+$objCalculadora->subtrair(10, 10);
+$objCalculadora->exibir();
+
 $objCalculadora->multiplicar(10, 10);
+$objCalculadora->exibir();
+
+$objCalculadora->dividir(10, 10);
 $objCalculadora->exibir();

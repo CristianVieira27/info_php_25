@@ -1,4 +1,4 @@
-🎯 O que é Orientação a Objetos?
+<!-- 🎯 O que é Orientação a Objetos?
 A Programação Orientada a Objetos (POO) organiza o código em objetos, que são como "coisas" com características
 (atributos) e ações (métodos).
 
@@ -117,4 +117,4 @@ Objeto $p = new Pessoa();
 Atributo public $nome;
 Método public function falar() {}
 Construtor __construct()
-Herança class Filho extends Pai
+Herança class Filho extends Pai -->

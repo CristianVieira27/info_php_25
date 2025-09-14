@@ -1,4 +1,4 @@
-🔹 O que é uma variável?
+<!-- 🔹 O que é uma variável?
 É um espaço na memória onde você guarda um valor (como texto, número, etc.). O valor pode mudar durante o programa.
 
 ✅ Regras:
@@ -61,4 +61,4 @@ define("EMPRESA", "Loja do João");
 echo "<h2>" . EMPRESA . "</h2>";
 echo "Produto: $produto<br>";
 echo "Preço: R$ $preco";
-?>
+?> -->

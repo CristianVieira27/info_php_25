@@ -1,4 +1,4 @@
-📌 O que é PHP com HTML?
+<!-- 📌 O que é PHP com HTML?
 Você pode misturar HTML (estrutura da página) com PHP (lógica do programa) no mesmo arquivo. Isso permite criar páginas
 interativas e inteligentes.
 
@@ -83,4 +83,4 @@ $nomes = ["Ana", "Bruno", "Carlos"];
         echo "<li>$nome</li>";
     }
     ?>
-</ul>
+</ul> -->

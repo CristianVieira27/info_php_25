@@ -1,6 +1,6 @@
 <?php
 //Somar dois arrays
-$soma = [];
+$somar = [];
 $numerosA = [10, 20, 30, 40, 50];
 $numerosB = [5, 45, 37, 2, 25];
 

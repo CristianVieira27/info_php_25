@@ -1,4 +1,4 @@
-✅ PRINCIPAIS ESTRUTURAS DE CONDIÇÃO EM PHP
+<!-- ✅ PRINCIPAIS ESTRUTURAS DE CONDIÇÃO EM PHP
 
 🔹 1. if
 Executa um bloco de código se a condição for verdadeira.
@@ -79,4 +79,4 @@ Operador Significado Exemplo
         } else {
             echo "Você não pode dirigir.";
         }
-        ?>
+        ?> -->

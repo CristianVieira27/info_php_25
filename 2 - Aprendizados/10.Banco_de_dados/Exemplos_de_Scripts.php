@@ -1,6 +1,4 @@
-<?php
-
-/* meu script
+<!-- meu script
 
  CRUD
  c = create
@@ -36,4 +34,4 @@ FROM pessoas p JOIN enderecos e ON p.id_usuario  = e.id_pessoas;
 SELECT * FROM pessoas p;
 
 SELECT * FROM enderecos e;
-*/
+ -->

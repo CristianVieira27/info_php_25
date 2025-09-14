@@ -1,4 +1,4 @@
-🔁 PRINCIPAIS ESTRUTURAS DE REPETIÇÃO EM PHP
+<!-- 🔁 PRINCIPAIS ESTRUTURAS DE REPETIÇÃO EM PHP
 🔹 1. while
 Repete enquanto a condição for verdadeira.
 <?php
@@ -69,4 +69,4 @@ for ($i = 1; $i <= 10; $i++) {
         echo "$i é ímpar<br>";
     }
 }
-?>
+?> -->

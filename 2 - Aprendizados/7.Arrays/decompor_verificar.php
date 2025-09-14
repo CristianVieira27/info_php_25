@@ -8,7 +8,7 @@
  *
  * Saida esperada: 1 nota de 100, 1 nota de 50 e 1 nota de 20.
  * $totalNotas["100"] += 1;
- * Não utilizar funcoes prontas do PHP.
+ * Não utilizar funções prontas do PHP.
  */
 $totalNotas = [
     "200" => 0,

@@ -1,6 +1,6 @@
-🔹 1. Array Indexado (ou Numérico)
+<!-- 🔹 1. Array Indexado (ou Numérico)
 Os índices são números, começando do 0.
-<?php
+
 $frutas = array("Maçã", "Banana", "Laranja");
 echo $frutas[0]; // Maçã
 echo $frutas[1]; // Banana
@@ -87,4 +87,4 @@ Exemplo:
 $numeros = [3, 1, 4, 1, 5, 9];
 sort($numeros);
 print_r($numeros);
-?>
+?> -->

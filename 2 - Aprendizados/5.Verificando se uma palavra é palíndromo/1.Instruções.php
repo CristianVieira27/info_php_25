@@ -1,4 +1,4 @@
-🧠 O que é um palíndromo?
+<!-- 🧠 O que é um palíndromo?
 É uma palavra ou frase que lê igual de trás pra frente, como:
 
 "ana"
@@ -55,4 +55,4 @@ if (isset($_POST["texto"])) {
     <input type="submit" value="Verificar">
 </form>
 
-<p><?php echo $resultado; ?></p>
+<p><?php echo $resultado; ?></p> -->

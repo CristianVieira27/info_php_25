@@ -1,4 +1,4 @@
-🔐 O que são Operadores Lógicos?
+<!-- 🔐 O que são Operadores Lógicos?
 Eles ligam duas ou mais condições, retornando verdadeiro (true) ou falso (false).
 
 ✅ Tabela dos operadores lógicos em PHP
@@ -74,4 +74,4 @@ if (isset($_POST["idade"])) {
 
 || → Basta uma condição ser verdadeira.
 
-! → Inverte (NOT).
+! → Inverte (NOT). -->

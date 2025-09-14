@@ -39,5 +39,4 @@ class Carro
 }
 
 $objCarro = new Carro();
-// $objCarro->ligar();
 $objCarro->exibir();

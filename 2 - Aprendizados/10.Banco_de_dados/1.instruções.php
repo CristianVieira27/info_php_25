@@ -1,6 +1,4 @@
-<?php
-
-/* 🟢 4. Conceitos Básicos de Banco de Dados
+<!-- /* 🟢 4. Conceitos Básicos de Banco de Dados
 📌 Banco de Dados
 
 É um "container" de tabelas. Exemplo: escola.
@@ -52,4 +50,4 @@ Relacionamentos entre tabelas (chave estrangeira FOREIGN KEY).
 
 JOINs (juntar dados de várias tabelas).
 
-*/
+*/ -->
