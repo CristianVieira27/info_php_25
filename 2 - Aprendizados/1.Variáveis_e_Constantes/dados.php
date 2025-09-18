@@ -4,7 +4,7 @@ $nome = "Cristian";
 $sobrenome = "Vieira";
 const ESTADO = "RS";
 
-echo "Me chamo $nome $sobrenome! Eu sou do estado de ".ESTADO."<br>";
+echo "Me chamo $nome $sobrenome! Eu sou do estado de " . ESTADO . "<br>";
 echo "<br>";
 ?>
 
