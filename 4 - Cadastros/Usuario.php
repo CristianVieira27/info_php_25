@@ -131,7 +131,7 @@ class Usuario
     }
 }
 
-$model = new Model();
+$model = new Model(1);
 $usuario = new Usuario($model);
 
 $usuario->listarUsuarios();
