@@ -20,6 +20,7 @@ while ($primos < 5) {
 
 echo "<br>";
 
+
 //Usando contagem de divisores
 $primos = 0;
 $num = 2;

@@ -7,18 +7,7 @@ $prova4 = 7;
 $soma = ($prova1 + $prova2 + $prova3 + $prova4);
 $media = $soma / 4;
 
-$peso1 = 1;
-$peso2 = 2;
-$peso3 = 3;
-$peso4 = 4;
-$media_ponderada = (
-    $prova1 * $peso1 +
-    $prova2 * $peso2 +
-    $prova3 * $peso3 +
-    $prova4 * $peso4
-) / ($peso1 + $peso2 + $peso3 + $peso4);
 
-echo "<br>";
 
 //Média ponderada
 
@@ -33,11 +22,10 @@ Exemplo:
 - Prova 2: 9,0 (peso 3)
 - Trabalho: 7,0 (peso 1)*/
 
-$media_ponderada = (8.0 * 2 + 9.0 * 3 + 7.0 * 1) / (2 + 3 + 1); // Resultado: 8.33
-
-echo "<hr>";
-
-
+$peso1 = 1;
+$peso2 = 2;
+$peso3 = 3;
+$peso4 = 4;
 $media_ponderada = (
     $prova1 * $peso1 +
     $prova2 * $peso2 +
@@ -46,6 +34,7 @@ $media_ponderada = (
 ) / ($peso1 + $peso2 + $peso3 + $peso4);
 
 echo "<br>";
+
 
 /* Média harmônica
 
@@ -56,8 +45,6 @@ Exemplo:
 - Conjunto: {2, 3, 4}*/
 
 $media_harmonica = 3 / (1 / 2 + 1 / 3 + 1 / 4);
-
-echo "<hr>";
 
 
 $media_harmonica = 4 / (
